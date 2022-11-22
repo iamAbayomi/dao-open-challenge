@@ -1,4 +1,4 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Image, Text } from "@chakra-ui/react";
 import { IHeaderLink } from "../../../types";
 import HeaderText from "../HeaderText";
 
@@ -14,6 +14,7 @@ const Header = () => {
     <Box
       display={"flex"}
       alignItems={"center"}
+      justifyContent={"space-between"}
       p={"30px 92px 30px"}
       boxSizing={"border-box"}
       borderBottom={"1px solid #CFCFCF"}
@@ -29,6 +30,10 @@ const Header = () => {
           <HeaderText key={item?.id} name={item?.name} link={item?.link} />
         ))}
       </Box>
+      <Button background={"#C2EC5B"}>
+        <Image alt={"link"} src={"./link.svg"} />
+        <Text fontWeight={"400"}>Connect Wallet</Text>
+      </Button>
     </Box>
   );
 };

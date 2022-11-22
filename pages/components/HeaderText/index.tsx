@@ -9,9 +9,9 @@ interface IProps {
 const HeaderText = ({ name, link = "" }: IProps) => {
   return (
     <Link href={link}>
-      <Box display={"flex"}>
-        <Text>{name}</Text>
-        <Image alt="up-arrow" src="./arrow-right.svg" />
+      <Box display={"flex"} m={"0px 10px 0px"}>
+        <Text fontWeight={"400"}>{name}</Text>
+        <Image ml={"10px"} alt="up-arrow" src="./arrow-right.svg" />
       </Box>
     </Link>
   );
