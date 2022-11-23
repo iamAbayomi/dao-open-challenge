@@ -3,3 +3,10 @@ export interface IHeaderLink {
     name: string,
     link: string
 }
+
+export interface ICategory{
+    id: number
+    image: string
+    title: string
+    subtitle: string
+}

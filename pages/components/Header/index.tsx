@@ -15,7 +15,7 @@ const Header = () => {
       display={"flex"}
       alignItems={"center"}
       justifyContent={"space-between"}
-      p={"30px 92px 30px"}
+      p={"28px 80px 28px"}
       boxSizing={"border-box"}
       borderBottom={"1px solid #CFCFCF"}
     >
