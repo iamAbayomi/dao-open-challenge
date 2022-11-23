@@ -1,4 +1,4 @@
-import { Box, Button, Text } from "@chakra-ui/react";
+import { Box, Button, Text, Image } from "@chakra-ui/react";
 import { ICategory } from "../../../types";
 import { category } from "../../../utils";
 import Category from "../Category";
@@ -20,12 +20,18 @@ const ValuePropositon = () => {
           exceptional DAOs. You have the power!
         </Text>
       </Box>
-      <Box margin={"60px auto 0px auto"} maxWidth={"380px"}>
-        <Button background={"#C2EC5B"}>
-          <Text fontWeight={"400"}>Explore DAOs</Text>
+      <Box margin={"60px auto 0px auto"} maxWidth={"max-content"}>
+        <Button background={"#C2EC5B"} p={"25px 30px"}>
+          <Image alt="explore" src="./explore.svg" />
+          <Text ml={"10px"} fontWeight={"400"}>
+            Explore DAOs
+          </Text>
         </Button>
         <Button ml={"40px"} background={"white"}>
-          <Text fontWeight={"400"}>Take Quick Survey</Text>
+          <Image alt="survey" src="./take-survey.svg" />
+          <Text ml={"10px"} fontWeight={"400"}>
+            Take Quick Survey
+          </Text>
         </Button>
       </Box>
 

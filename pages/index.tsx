@@ -18,14 +18,14 @@ export default function Home() {
         <Banner />
         <Header />
         <ValuePropositon />
-        <Text
-          margin={"200px 0px 20px 50px"}
-          color={"#FF7A00"}
-          fontWeight={"700"}
-          fontSize={"56px"}
-        >
-          Discover <Span> our</Span> DAOs
-        </Text>
+        <Box margin={"200px 0px 20px 50px"}>
+          <Text color={"#FF7A00"} fontWeight={"700"} fontSize={"56px"}>
+            Discover <Span> our</Span> DAOs
+          </Text>
+          <Text fontWeight={"400"}>
+            We have over 1,000 Active DAOs for you to Explore
+          </Text>
+        </Box>
       </Box>
     </Box>
   );
