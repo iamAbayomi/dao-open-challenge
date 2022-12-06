@@ -10,3 +10,8 @@ export interface ICategory{
     title: string
     subtitle: string
 }
+
+export interface IBadge {
+    image: string
+    text: string
+}
