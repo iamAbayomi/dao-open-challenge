@@ -1,5 +1,7 @@
 import { Box, Image, Input, Text } from "@chakra-ui/react";
 import styled from "@emotion/styled";
+import { badgeData } from "../utils/dummydata";
+import Badge from "./components/Badge";
 import Banner from "./components/Banner";
 import Header from "./components/Header";
 import ValuePropositon from "./components/ValueProposition";
@@ -67,6 +69,22 @@ export default function Home() {
               <Image height={"24px"} alt={"grid"} src={"./grid.svg"} />
               <Text ml={"15px"} fontWeight={"400"}>
                 Grid View
+              </Text>
+            </Box>
+          </Box>
+          <Box mt={"49px"} display={"flex"} width={"100%"}>
+            {badgeData?.map((item) => (
+              <Badge key={item?.id} item={item} />
+            ))}
+
+            <Box
+              fontSize={"14px"}
+              background={"black"}
+              borderRadius={"20px"}
+              p={"10px 20px"}
+            >
+              <Text m={"10px 20px"} color={"white"}>
+                View More
               </Text>
             </Box>
           </Box>
