@@ -1,10 +1,12 @@
 import { Box, Image, Input, Text } from "@chakra-ui/react";
 import styled from "@emotion/styled";
-import { badgeData } from "../utils/dummydata";
+import { badgeData, daoData } from "../utils/dummydata";
 import Badge from "./components/Badge";
 import Banner from "./components/Banner";
 import Header from "./components/Header";
+import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
 import ValuePropositon from "./components/ValueProposition";
+import DaoContainer from "./components/Dao";
 
 const Span = styled.span`
   color: black;
@@ -17,7 +19,7 @@ export default function Home() {
         <Banner />
         <Header />
         <ValuePropositon />
-        <Box margin={"200px 0px 20px 50px"}>
+        <Box margin={"200px 50px 20px 50px"}>
           <Text color={"#FF7A00"} fontWeight={"700"} fontSize={"56px"}>
             Discover <Span> our</Span> DAOs
           </Text>
@@ -72,20 +74,55 @@ export default function Home() {
               </Text>
             </Box>
           </Box>
-          <Box mt={"49px"} display={"flex"} width={"100%"}>
+
+          <Box
+            mt={"49px"}
+            display={"flex"}
+            width={"100%"}
+            alignItems={"center"}
+          >
             {badgeData?.map((item) => (
               <Badge key={item?.id} item={item} />
             ))}
 
-            <Box
-              fontSize={"14px"}
-              background={"black"}
-              borderRadius={"20px"}
-              p={"10px 20px"}
-            >
+            <Box fontSize={"14px"} background={"black"} borderRadius={"20px"}>
               <Text m={"10px 20px"} color={"white"}>
                 View More
               </Text>
+            </Box>
+          </Box>
+
+          <Box>
+            <Box
+              display={"flex"}
+              justifyContent={"space-between"}
+              m={"130px 0px 0px 0px"}
+            >
+              <Text fontSize={"20px"} fontWeight={"700"}>
+                🔥 Hot DAOs
+              </Text>
+              <Box display={"flex"}>
+                <Box
+                  background={"#F2F2F2"}
+                  maxWidth={"max-content"}
+                  borderRadius={"5px"}
+                  p={"7px 2px 0px 2px"}
+                >
+                  <IoMdArrowBack />
+                </Box>
+                <Box
+                  background={"#F2F2F2"}
+                  ml={"20px"}
+                  p={"7px 2px 0px 2px"}
+                  maxWidth={"max-content"}
+                  borderRadius={"5px"}
+                >
+                  <IoMdArrowForward />
+                </Box>
+              </Box>
+            </Box>
+            <Box>
+              <DaoContainer item={daoData[0]} />
             </Box>
           </Box>
         </Box>

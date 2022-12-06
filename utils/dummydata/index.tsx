@@ -1,4 +1,4 @@
-import { IBadge } from "../../types";
+import { IBadge, IDaoContainer } from "../../types";
 
 export const badgeData: IBadge[] = [
   {
@@ -20,5 +20,15 @@ export const badgeData: IBadge[] = [
     id: 4,
     image: "./socialDao.svg",
     text: "Social Dao"
+  }
+];
+
+export const daoData: IDaoContainer[] = [
+  {
+    appLogo: "Apecoin DAO",
+    description:
+      "ApeCoin is an ERC-20 governance and utility token used to empower a decentralized community building at the forefront of web3.",
+    tags: "",
+    title: ""
   }
 ];

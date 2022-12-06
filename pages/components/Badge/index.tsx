@@ -16,7 +16,7 @@ const Badge = ({ item }: Props) => {
       border={"1px solid #DBDBDB"}
       borderRadius={"20px"}
     >
-      <Image alt={"image"} src={item?.image} />
+      <Image h={"19px"} alt={"image"} src={item?.image} />
       <Text ml={"21px"} fontSize={"14px"} whiteSpace={"nowrap"}>
         {item?.text}
       </Text>

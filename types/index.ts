@@ -16,3 +16,10 @@ export interface IBadge {
     image: string
     text: string
 }
+
+export interface IDaoContainer {
+    appLogo: string;
+    title: string;
+    description: string;
+    tags: string;
+}
