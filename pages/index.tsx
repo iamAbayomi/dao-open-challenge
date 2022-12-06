@@ -1,9 +1,6 @@
-import { Box, Button, Text } from "@chakra-ui/react";
+import { Box, Image, Input, Text } from "@chakra-ui/react";
 import styled from "@emotion/styled";
-import { ICategory } from "../types";
-import { category } from "../utils";
 import Banner from "./components/Banner";
-import Category from "./components/Category";
 import Header from "./components/Header";
 import ValuePropositon from "./components/ValueProposition";
 
@@ -25,6 +22,54 @@ export default function Home() {
           <Text fontWeight={"400"}>
             We have over 1,000 Active DAOs for you to Explore
           </Text>
+          <Box
+            margin={"32px 0px 0px 0px"}
+            display={"flex"}
+            alignItems={"center"}
+          >
+            <Box
+              height={"70px"}
+              width={"700px"}
+              border={"1px solid #BEBEBE"}
+              borderRadius={"20px"}
+              background={"#FBFBFB"}
+            >
+              <Box
+                display={"flex"}
+                margin={"25px 67px 12px 37px"}
+                boxSizing={"border-box"}
+              >
+                <Image
+                  width={"20px"}
+                  height={"20px"}
+                  alt="search"
+                  src="./search.svg"
+                />
+                <Text
+                  ml={"15px"}
+                  color={"#919191"}
+                  fontWeight={"400"}
+                  fontSize={"12px"}
+                >
+                  Search for DAOs
+                </Text>
+              </Box>
+            </Box>
+            <Box
+              display={"flex"}
+              background={"#FBFBFB"}
+              p={"10px 20px"}
+              ml={"30px"}
+              boxSizing={"border-box"}
+              border={"1px solid #DBDBDB"}
+              borderRadius={"10px"}
+            >
+              <Image height={"24px"} alt={"grid"} src={"./grid.svg"} />
+              <Text ml={"15px"} fontWeight={"400"}>
+                Grid View
+              </Text>
+            </Box>
+          </Box>
         </Box>
       </Box>
     </Box>
