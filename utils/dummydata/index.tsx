@@ -23,12 +23,56 @@ export const badgeData: IBadge[] = [
   }
 ];
 
-export const daoData: IDaoContainer[] = [
+export const hotDaoData: IDaoContainer[] = [
   {
-    appLogo: "Apecoin DAO",
+    id: 1,
+    appLogo: "./appDao.svg",
     description:
       "ApeCoin is an ERC-20 governance and utility token used to empower a decentralized community building at the forefront of web3.",
-    tags: "",
-    title: ""
+    tags: ["Social", "Top 10 Trending DAO"],
+    title: "Apecoin DAO"
+  },
+  {
+    id: 2,
+    appLogo: "./decentraland.svg",
+    description:
+      "ApeCoin is an ERC-20 governance and utility token used to empower a decentralized community building at the forefront of web3.",
+    tags: ["Investment", "Top 10 Trending DAO"],
+    title: "Decentraland"
+  },
+  {
+    id: 3,
+    appLogo: "./ukraine.svg",
+    description:
+      "ApeCoin is an ERC-20 governance and utility token used to empower a decentralized community building at the forefront of web3.",
+    tags: ["Charity", "Fundraising"],
+    title: "UkraineDAO"
+  }
+];
+
+export const newDaoData: IDaoContainer[] = [
+  {
+    id: 1,
+    appLogo: "./bitDao.svg",
+    description:
+      "ApeCoin is an ERC-20 governance and utility token used to empower a decentralized community building at the forefront of web3.",
+    tags: ["Investment", "Start Up"],
+    title: "BitDAO"
+  },
+  {
+    id: 2,
+    appLogo: "./ukraine.svg",
+    description:
+      "ApeCoin is an ERC-20 governance and utility token used to empower a decentralized community building at the forefront of web3.",
+    tags: ["Charity", "Fundraising"],
+    title: "UkraineDAO"
+  },
+  {
+    id: 3,
+    appLogo: "./appDao.svg",
+    description:
+      "ApeCoin is an ERC-20 governance and utility token used to empower a decentralized community building at the forefront of web3.",
+    tags: ["Social", "Top 10 Trending DAO"],
+    title: "Apecoin DAO"
   }
 ];

@@ -18,8 +18,9 @@ export interface IBadge {
 }
 
 export interface IDaoContainer {
+    id: number;
     appLogo: string;
     title: string;
     description: string;
-    tags: string;
+    tags: string[];
 }
