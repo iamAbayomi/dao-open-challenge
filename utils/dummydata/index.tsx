@@ -1,4 +1,4 @@
-import { IBadge, IDaoContainer } from "../../types";
+import { IBadge, IDaoContainer, IInfoContainer } from "../../types";
 
 export const badgeData: IBadge[] = [
   {
@@ -74,5 +74,29 @@ export const newDaoData: IDaoContainer[] = [
       "ApeCoin is an ERC-20 governance and utility token used to empower a decentralized community building at the forefront of web3.",
     tags: ["Social", "Top 10 Trending DAO"],
     title: "Apecoin DAO"
+  }
+];
+
+export const infoData: IInfoContainer[] = [
+  {
+    id: 1,
+    image: "./join.svg",
+    title: "Join",
+    description:
+      "First step to making making a meaningful contribution on a DAO it to joining OpenDAO"
+  },
+  {
+    id: 2,
+    image: "./learn.svg",
+    title: "Learn",
+    description:
+      "After you join us, we are entitled to educate you on your journey of contributing"
+  },
+  {
+    id: 3,
+    image: "./contribute.svg",
+    title: "Contribute",
+    description:
+      "We have done our part to walk you through the DAOverse, now it’s time to take the bold step"
   }
 ];

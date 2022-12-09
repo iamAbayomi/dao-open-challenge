@@ -24,3 +24,16 @@ export interface IDaoContainer {
     description: string;
     tags: string[];
 }
+
+export interface IInfoContainer {
+    id: number
+    image: string
+    title: string
+    description: string
+}
+
+export interface ICard {
+    image: string
+    title: string
+    description: string
+}
