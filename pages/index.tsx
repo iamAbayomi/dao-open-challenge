@@ -1,25 +1,8 @@
-import { Box, Button, Image, Input, Text } from "@chakra-ui/react";
-import styled from "@emotion/styled";
-import {
-  badgeData,
-  gettingStartedData,
-  governAssets,
-  headerData,
-  hotDaoData,
-  infoData,
-  newDaoData,
-  resourcesData
-} from "../utils/dummydata";
-import Badge from "../components/Badge";
+import { Box } from "@chakra-ui/react";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
 import ValuePropositon from "../components/ValueProposition";
-import { IDaoContainer, IHeaderLink, IInfoContainer, IItem } from "../types";
-import DiscoverDao from "../components/DiscoverDao";
-import InfoContainer from "../components/InfoContainer";
 import DiscoverSection from "../components/DiscoverSection";
-import GettingStartedComponent from "../components/GettingStarted/GettingStartedComponent";
-import HeaderText from "../components/HeaderText";
 import DaoContribution from "../components/DaoContribution";
 import GovernAssets from "../components/GovernAssets";
 import GettingStartedSection from "../components/GettingStarted/GettingStartedSection";

@@ -1,4 +1,5 @@
 import {
+  IAboutUs,
   IBadge,
   IDaoContainer,
   IHeaderLink,
@@ -147,7 +148,22 @@ export const footerData: IItem[] = [
 
 export const headerData: IHeaderLink[] = [
   { id: 1, name: "Explore", link: "/explore" },
-  { id: 1, name: "Learn", link: "" },
-  { id: 1, name: "About Us", link: "" },
+  { id: 1, name: "Learn", link: "/glossary" },
+  { id: 1, name: "About Us", link: "/aboutus" },
   { id: 1, name: "Documentation", link: "" }
+];
+
+export const aboutusData: IAboutUs[] = [
+  {
+    id: 1,
+    title: "About Creators",
+    firstText: "More on Temidayo",
+    secondText: "More on Queennete"
+  },
+  {
+    id: 1,
+    title: "About OpenDAO",
+    firstText: "Read Documentations",
+    secondText: "Read Vision & Mission"
+  }
 ];
