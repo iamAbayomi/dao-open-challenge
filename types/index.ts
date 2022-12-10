@@ -42,3 +42,9 @@ export interface IItem{
     id: number,
     name: string
 }
+export interface IAboutUs{
+    id: number
+    title: string
+    firstText: string
+    secondText: string
+}
