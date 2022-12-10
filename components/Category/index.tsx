@@ -1,5 +1,5 @@
 import { Box, Image, Text } from "@chakra-ui/react";
-import { ICategory } from "../../../types";
+import { ICategory } from "../../types";
 
 interface IProps {
   item: ICategory;

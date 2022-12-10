@@ -1,6 +1,6 @@
 import { Box, Button, Text, Image } from "@chakra-ui/react";
-import { ICategory } from "../../../types";
-import { category } from "../../../utils";
+import { ICategory } from "../../types";
+import { category } from "../../utils";
 import Category from "../Category";
 
 const ValuePropositon = () => {

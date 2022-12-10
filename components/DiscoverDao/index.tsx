@@ -1,6 +1,6 @@
 import { Box, Text, Image } from "@chakra-ui/react";
 import styled from "@emotion/styled";
-import { badgeData } from "../../../utils/dummydata";
+import { badgeData } from "../../utils/dummydata";
 import Badge from "../Badge";
 
 const Span = styled.span`

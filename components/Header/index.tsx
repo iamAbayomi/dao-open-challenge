@@ -1,6 +1,6 @@
 import { Box, Button, Image, Text } from "@chakra-ui/react";
-import { IHeaderLink } from "../../../types";
-import { headerData } from "../../../utils/dummydata";
+import { IHeaderLink } from "../../types";
+import { headerData } from "../../utils/dummydata";
 import HeaderText from "../HeaderText";
 
 const Header = () => {
