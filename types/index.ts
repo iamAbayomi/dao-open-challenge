@@ -37,3 +37,8 @@ export interface ICard {
     title: string
     description: string
 }
+
+export interface IItem{
+    id: number,
+    name: string
+}

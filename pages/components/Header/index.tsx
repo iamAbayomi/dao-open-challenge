@@ -1,15 +1,9 @@
 import { Box, Button, Image, Text } from "@chakra-ui/react";
 import { IHeaderLink } from "../../../types";
+import { headerData } from "../../../utils/dummydata";
 import HeaderText from "../HeaderText";
 
 const Header = () => {
-  const headerData: IHeaderLink[] = [
-    { id: 1, name: "Explore", link: "/explore" },
-    { id: 1, name: "Learn", link: "" },
-    { id: 1, name: "About Us", link: "" },
-    { id: 1, name: "Documentation", link: "" }
-  ];
-
   return (
     <Box
       display={"flex"}

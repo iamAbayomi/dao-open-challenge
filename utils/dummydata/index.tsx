@@ -1,4 +1,10 @@
-import { IBadge, IDaoContainer, IInfoContainer } from "../../types";
+import {
+  IBadge,
+  IDaoContainer,
+  IHeaderLink,
+  IInfoContainer,
+  IItem
+} from "../../types";
 
 export const badgeData: IBadge[] = [
   {
@@ -99,4 +105,49 @@ export const infoData: IInfoContainer[] = [
     description:
       "We have done our part to walk you through the DAOverse, now it’s time to take the bold step"
   }
+];
+
+export const governAssets: string[] = [
+  "Govern and make decisions about your assets here",
+  "Propose new causes and discuss how your assets should run here.",
+  "Have complete transparency and visibility over everything. Secure your Assets!"
+];
+
+export const gettingStartedData: string[] = [
+  "What is a DAO?",
+  "How do I register a new DAO?",
+  "Do I need crypto to join or invest in a DAO?"
+];
+
+export const resourcesData: IItem[] = [
+  { id: 1, name: "Knowledge base" },
+  { id: 2, name: "Support" },
+  { id: 3, name: "FAQ" },
+  { id: 4, name: "Dictionary" }
+];
+
+export const footerData: IItem[] = [
+  {
+    id: 1,
+    name: "Explore"
+  },
+  {
+    id: 2,
+    name: "Learn"
+  },
+  {
+    id: 3,
+    name: "About Us"
+  },
+  {
+    id: 2,
+    name: "Documentation"
+  }
+];
+
+export const headerData: IHeaderLink[] = [
+  { id: 1, name: "Explore", link: "/explore" },
+  { id: 1, name: "Learn", link: "" },
+  { id: 1, name: "About Us", link: "" },
+  { id: 1, name: "Documentation", link: "" }
 ];
