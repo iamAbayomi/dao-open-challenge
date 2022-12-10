@@ -1,10 +1,11 @@
 import { Box } from "@chakra-ui/react";
+import { ReactNode } from "react";
 import DiscoverSection from "../../DiscoverSection";
 import Footer from "../../Footer";
 import Header from "../../Header";
 
 type props = {
-  children: string;
+  children: ReactNode;
 };
 
 const HomeLayout = ({ children }: props) => {
