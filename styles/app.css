@@ -1,0 +1,15 @@
+.category {
+}
+.category+.category {
+    /* margin-left: 50px ; */
+}
+
+.dao-container {
+    background: linear-gradient(105.6deg, #F8F8F8 0%, rgba(248, 248, 248, 0) 100%);
+}
+.dao-container + .dao-container{
+    margin-left: 100px;
+}
+.info-container + .info-container{
+    margin-left: 50px;
+}
