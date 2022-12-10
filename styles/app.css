@@ -1,9 +1,3 @@
-.category {
-}
-.category+.category {
-    /* margin-left: 50px ; */
-}
-
 .dao-container {
     background: linear-gradient(105.6deg, #F8F8F8 0%, rgba(248, 248, 248, 0) 100%);
 }
@@ -13,3 +7,7 @@
 .info-container + .info-container{
     margin-left: 50px;
 }
+.pointer {
+  cursor: pointer;
+}
+

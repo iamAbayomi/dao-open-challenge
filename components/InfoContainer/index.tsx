@@ -1,5 +1,5 @@
 import { Box, Text, Image } from "@chakra-ui/react";
-import { ICard, IInfoContainer } from "../../../types";
+import { ICard, IInfoContainer } from "../../types";
 
 interface Props {
   item: IInfoContainer;

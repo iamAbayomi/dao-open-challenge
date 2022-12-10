@@ -1,9 +1,14 @@
 import { Box, Button, Image, Text } from "@chakra-ui/react";
-import { IHeaderLink } from "../../../types";
-import { headerData } from "../../../utils/dummydata";
+import { useRouter } from "next/router";
+import { IHeaderLink } from "../../types";
+import { headerData } from "../../utils/dummydata";
 import HeaderText from "../HeaderText";
 
 const Header = () => {
+  const router = useRouter();
+  function moveToHomePage() {
+    router.push("/");
+  }
   return (
     <Box
       display={"flex"}
@@ -13,7 +18,7 @@ const Header = () => {
       boxSizing={"border-box"}
       borderBottom={"1px solid #CFCFCF"}
     >
-      <Box display={"flex"}>
+      <Box display={"flex"} onClick={moveToHomePage} className={"pointer"}>
         <Image alt={"open-dao-logo"} src={"opendao.svg"} />
         <Text ml={"20px"} fontSize={"50px"} fontWeight={"700"}>
           OpenDAO

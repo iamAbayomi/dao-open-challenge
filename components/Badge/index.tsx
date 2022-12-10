@@ -1,5 +1,5 @@
 import { Box, Text, Image } from "@chakra-ui/react";
-import { IBadge } from "../../../types";
+import { IBadge } from "../../types";
 
 interface Props {
   item: IBadge;

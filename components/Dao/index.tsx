@@ -1,6 +1,6 @@
 import { Box, Text, Image, Button } from "@chakra-ui/react";
 import { MdOutlineStarPurple500 } from "react-icons/md";
-import { IDaoContainer } from "../../../types";
+import { IDaoContainer } from "../../types";
 import Tags from "../Tags";
 
 interface IProps {

@@ -1,7 +1,7 @@
 import { Box, Text } from "@chakra-ui/react";
 import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
-import { IDaoContainer } from "../../../types";
-import { hotDaoData, newDaoData } from "../../../utils/dummydata";
+import { IDaoContainer } from "../../types";
+import { hotDaoData, newDaoData } from "../../utils/dummydata";
 import DaoContainer from "../Dao";
 import DiscoverDao from "../DiscoverDao";
 
