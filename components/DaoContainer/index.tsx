@@ -39,7 +39,7 @@ const DaoContainer = ({ item }: IProps) => {
           <MdOutlineStarPurple500 size={"22px"} color="#B0B0B0" />
         </Box>
       </Box>
-      <Box display={"flex"} margin={"35px 0px 0px 0px"}>
+      <Box display={"flex"} gap={"20px"} margin={"35px 0px 0px 0px"}>
         <Tags text={"Social"} color={"rgba(236, 91, 91, 0.5)"} />
         <Tags text={"Top 10 Trending DAO"} color={"rgba(0, 255, 240, 0.5)"} />
       </Box>

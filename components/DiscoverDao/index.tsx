@@ -93,7 +93,13 @@ const DiscoverDao = () => {
         </Box>
       </Box>
 
-      <Box mt={"49px"} display={"flex"} width={"100%"} alignItems={"center"}>
+      <Box
+        mt={"49px"}
+        display={"flex"}
+        width={"100%"}
+        gap={"40px"}
+        alignItems={"center"}
+      >
         {badgeData?.map((item) => (
           <Badge key={item?.id} item={item} />
         ))}

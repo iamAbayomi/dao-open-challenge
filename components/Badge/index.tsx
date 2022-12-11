@@ -5,22 +5,22 @@ interface Props {
   item: IBadge;
   background?: string;
   textColor?: string;
+  isRowReverse?: boolean;
 }
 
-const Badge = ({ item, background, textColor }: Props) => {
+const Badge = ({ item, background, textColor, isRowReverse }: Props) => {
   return (
     <Box
       display={"flex"}
-      mr={"40px"}
+      gap={"21px"}
+      flexDirection={isRowReverse ? "row-reverse" : "row"}
       background={background ? background : "#FBFBFB"}
       p={"10px 20px"}
       maxWidth={"max-content"}
       border={"1px solid #DBDBDB"}
       borderRadius={"20px"}
     >
-      {item?.image && (
-        <Image mr={"21px"} h={"19px"} alt={"image"} src={item?.image} />
-      )}
+      {item?.image && <Image h={"19px"} alt={"image"} src={item?.image} />}
       <Text fontSize={"14px"} color={textColor} whiteSpace={"nowrap"}>
         {item?.text}
       </Text>
