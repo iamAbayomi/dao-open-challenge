@@ -8,13 +8,15 @@ type Props = {
 const Tags = ({ text, color }: Props) => {
   return (
     <Box
+      className="tags"
       maxWidth={"max-content"}
-      mr={"39px"}
       p={"5px 10px"}
       borderRadius={"5px"}
       background={color}
     >
-      <Text fontWeight={"400"}>{text}</Text>
+      <Text fontSize={"14px"} fontWeight={"400"}>
+        {text}
+      </Text>
     </Box>
   );
 };

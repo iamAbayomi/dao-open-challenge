@@ -6,8 +6,11 @@ import HeaderText from "../HeaderText";
 
 const Header = () => {
   const router = useRouter();
-  function isExplorePage() {
-    return router.pathname.includes("/aboutus") ? true : false;
+  function isDark() {
+    return router.pathname === "/aboutus" ||
+      router.pathname === "/recommendedDaos"
+      ? true
+      : false;
   }
   function moveToHomePage() {
     router.push("/");
@@ -20,17 +23,18 @@ const Header = () => {
       p={"24px 80px 24px"}
       boxSizing={"border-box"}
       borderBottom={"1px solid #CFCFCF"}
+      background={isDark() ? "black" : "white"}
     >
       <Box display={"flex"} onClick={moveToHomePage} className={"pointer"}>
         <Image
           alt={"open-dao-logo"}
-          src={isExplorePage() ? "app-logo-green.svg" : "opendao.svg"}
+          src={isDark() ? "app-logo-green.svg" : "opendao.svg"}
         />
         <Text
           ml={"20px"}
           fontSize={"50px"}
           fontWeight={"700"}
-          color={isExplorePage() ? "white" : "black"}
+          color={isDark() ? "white" : "black"}
         >
           OpenDAO
         </Text>
@@ -41,14 +45,14 @@ const Header = () => {
             key={item?.id}
             name={item?.name}
             link={item?.link}
-            color={isExplorePage() ? "white" : "black"}
-            isDark={isExplorePage()}
+            color={isDark() ? "white" : "black"}
+            isDark={isDark()}
           />
         ))}
       </Box>
       <Button background={"#C2EC5B"}>
         <Image alt={"link"} src={"./link.svg"} />
-        <Text color={!isExplorePage() ? "white" : "black"} fontWeight={"400"}>
+        <Text color={!isDark() ? "white" : "black"} fontWeight={"400"}>
           Connect Wallet
         </Text>
       </Button>

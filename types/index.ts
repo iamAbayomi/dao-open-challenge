@@ -12,8 +12,8 @@ export interface ICategory{
 }
 
 export interface IBadge {
-    id:number
-    image: string
+    id?:number
+    image?: string
     text: string
 }
 
