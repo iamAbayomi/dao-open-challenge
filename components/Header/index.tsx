@@ -52,7 +52,7 @@ const Header = () => {
       </Box>
       <Button background={"#C2EC5B"}>
         <Image alt={"link"} src={"./link.svg"} />
-        <Text color={!isDark() ? "white" : "black"} fontWeight={"400"}>
+        <Text color={"black"} fontWeight={"400"}>
           Connect Wallet
         </Text>
       </Button>

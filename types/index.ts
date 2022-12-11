@@ -48,3 +48,10 @@ export interface IAboutUs{
     firstText: string
     secondText: string
 }
+
+export interface ICategories {
+    id: number
+    title: string
+    subtitle: string
+    background: string
+}

@@ -1,6 +1,7 @@
 import {
   IAboutUs,
   IBadge,
+  ICategories,
   IDaoContainer,
   IHeaderLink,
   IInfoContainer,
@@ -165,5 +166,71 @@ export const aboutusData: IAboutUs[] = [
     title: "About OpenDAO",
     firstText: "Read Documentations",
     secondText: "Read Vision & Mission"
+  }
+];
+
+export const detailedDao: IBadge[] = [
+  {
+    id: 1,
+    image: "./proposals.svg",
+    text: "Proposals"
+  },
+  {
+    id: 2,
+    image: "./news.svg",
+    text: "News"
+  },
+  {
+    id: 3,
+    image: "./about.svg",
+    text: "About"
+  }
+];
+
+export const categoriesData: ICategories[] = [
+  {
+    id: 1,
+    title: "All Proposals",
+    subtitle: "View All Available Proposals",
+    background: "#D9D9D9"
+  },
+  {
+    id: 2,
+    title: "Membership",
+    subtitle: "Tributing capital and Requesting new shares to join the DAO",
+    background: "#BBFF85"
+  },
+  {
+    id: 3,
+    title: "Funding",
+    subtitle:
+      "Requesting funds from the DAO to work on internal projects and improvements",
+    background: "rgba(111, 250, 241, 0.5)"
+  },
+  {
+    id: 4,
+    title: "Token",
+    subtitle: "Request to add support for a new ERC20 token",
+    background: "#FFE587;"
+  },
+  {
+    id: 5,
+    title: "Trade",
+    subtitle:
+      "Request the DAO to swap one asset for another within the War Chest",
+    background: "#BAA1FF"
+  },
+  {
+    id: 6,
+    title: "GuildKick",
+    subtitle: "Request to forcibly remove another member through a votes",
+    background: "#FF92DA"
+  },
+  {
+    id: 7,
+    title: "Minion",
+    subtitle:
+      "Execute an external contract function e.g. swapping assets in the DAO bank",
+    background: "#FF8686"
   }
 ];
