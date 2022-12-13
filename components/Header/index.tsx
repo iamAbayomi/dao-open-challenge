@@ -39,7 +39,7 @@ const Header = () => {
           OpenDAO
         </Text>
       </Box>
-      <Box display={"flex"}>
+      <Box display={"flex"} gap={"20px"}>
         {headerData?.map((item: IHeaderLink) => (
           <HeaderText
             key={item?.id}

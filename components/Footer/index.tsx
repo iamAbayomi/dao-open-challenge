@@ -5,7 +5,29 @@ import HeaderText from "../HeaderText";
 
 const Footer = () => {
   return (
-    <Box p={"100px 40px 60px 60px"}>
+    <Box pos={"relative"} p={"100px 40px 60px 40px"} border={"1px solid black"}>
+      <Box display={"flex"} position={"absolute"} top={"0px"} right={"55%"}>
+        <Box
+          position={"absolute"}
+          width={"200px"}
+          height={"200px"}
+          borderRadius={"0px 0px 100px"}
+          background={"rgba(255, 122, 0, 0.5)"}
+          filter={"blur(30px)"}
+          transform={"rotate(25deg)"}
+        />
+        <Box
+          position={"absolute"}
+          top={"60px"}
+          height={"200px"}
+          width={"200px"}
+          left={"-115px"}
+          borderRadius={"100px"}
+          background={"rgba(194, 236, 91, 0.5)"}
+          filter={"blur(30px)"}
+          transform={"rotate(25deg)"}
+        />
+      </Box>
       <Box display={"flex"} justifyContent={"space-between"}>
         <Box>
           <Image
@@ -27,7 +49,7 @@ const Footer = () => {
             />
           </Box>
         </Box>
-        <Text mt={"60px"} fontWeight={"330"} fontSize={"15px"}>
+        <Text mt={"90px"} fontWeight={"330"} fontSize={"15px"}>
           The one-stop-shop to find, invest <br /> and vote in extraordinary
           DAOs
         </Text>

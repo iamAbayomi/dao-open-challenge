@@ -41,7 +41,7 @@ const DiscoverSection = () => {
           </Box>
           <Box
             display={"flex"}
-            margin={"30px 0px 0px 0px"}
+            margin={"10px 0px 0px 0px"}
             alignItems={"center"}
             overflow={"scroll"}
             width={"100%"}

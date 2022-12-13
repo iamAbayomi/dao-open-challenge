@@ -11,14 +11,21 @@ interface IProps {
 const HeaderText = ({ name, link = "", color, isDark }: IProps) => {
   return (
     <Link href={link}>
-      <Box display={"flex"} m={"0px 10px 0px"}>
-        <Text color={color} fontWeight={"300"}>
+      <Box display={"flex"} m={"0px 10px 0px"} alignItems={"center"}>
+        <Text color={color} fontWeight={"400"}>
           {name}
         </Text>
         <Image
           ml={"10px"}
+          width={name == "Learn" ? "12px" : "17px"}
           alt="up-arrow"
-          src={`${isDark ? "./arrow-up-right.svg" : "./arrow-right.svg"} `}
+          src={`${
+            isDark
+              ? "./arrow-up-right.svg"
+              : name === "Learn"
+              ? "./downarrow.svg"
+              : "./arrow-right.svg"
+          }`}
         />
       </Box>
     </Link>
