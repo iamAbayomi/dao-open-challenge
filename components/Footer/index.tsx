@@ -5,7 +5,7 @@ import HeaderText from "../HeaderText";
 
 const Footer = () => {
   return (
-    <Box pos={"relative"} p={"100px 40px 60px 40px"} border={"1px solid black"}>
+    <Box pos={"relative"} p={"100px 40px 60px 40px"}>
       <Box display={"flex"} position={"absolute"} top={"0px"} right={"55%"}>
         <Box
           position={"absolute"}
