@@ -13,7 +13,7 @@ const ValuePropositon = () => {
               margin={"122px 0px 0px"}
               fontFamily={"Malgony"}
               fontWeight={"700"}
-              fontSize={"122px"}
+              fontSize={"7.625rem"}
               textAlign={"center"}
             >
               All DAO. In ONE.
@@ -43,7 +43,8 @@ const ValuePropositon = () => {
 
         <Box
           display={"flex"}
-          margin={"200px auto 0px"}
+          flexDirection={{ base: "column", xl: "row" }}
+          margin={{ base: "170px 10px 0px", xl: "200px auto 0px" }}
           maxWidth={"max-content"}
         >
           <Category item={category[0]} />

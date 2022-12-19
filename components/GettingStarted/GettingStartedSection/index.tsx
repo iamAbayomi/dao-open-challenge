@@ -76,6 +76,7 @@ const GettingStartedSection = () => {
           display={"flex"}
           alignItems={"center"}
           justifyContent={"space-between"}
+          flexDir={{ base: "column", xl: "row" }}
         >
           <Text fontSize={"34px"} fontWeight={"740"}>
             Join our community.

@@ -21,7 +21,7 @@ const Badge = ({ item, background, textColor, isRowReverse }: Props) => {
       borderRadius={"20px"}
     >
       {item?.image && <Image h={"19px"} alt={"image"} src={item?.image} />}
-      <Text fontSize={"14px"} color={textColor} whiteSpace={"nowrap"}>
+      <Text fontSize={"0.875rem"} color={textColor} whiteSpace={"nowrap"}>
         {item?.text}
       </Text>
     </Box>

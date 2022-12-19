@@ -15,7 +15,7 @@ const GettingStartedComponent = ({ text = "What is a DAO?" }: Props) => {
       p={"24px 34px 24px 34px"}
       borderRadius={"10px"}
     >
-      <Text fontWeight={"700"} fontSize={"18px"}>
+      <Text fontWeight={"700"} fontSize={"1.125rem"}>
         {text}
       </Text>
       <Image height={"20px"} alt={"plus"} src={"./plus.svg"} />

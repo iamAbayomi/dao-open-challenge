@@ -65,7 +65,7 @@ const Footer = () => {
       <Box mt={"43px"} borderBottom={"0.5px solid #A1A1A1"} />
       <Box mt={"40px"} display={"flex"} justifyContent={"space-between"}>
         <Text>Made with ❤️ by Temidayo & Queennette</Text>
-        <Box display={"flex"}>
+        <Box display={"flex"} flexDir={{ base: "column", xl: "row" }}>
           {headerData?.map((item: IHeaderLink) => (
             <HeaderText key={item?.id} name={item?.name} link={item?.link} />
           ))}
