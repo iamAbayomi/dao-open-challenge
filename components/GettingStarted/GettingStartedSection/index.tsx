@@ -33,7 +33,7 @@ const GettingStartedSection = () => {
         <Text fontWeight={"700"} fontSize={"40px"} textAlign={"center"}>
           Getting Started
         </Text>
-        <Box position={"relative"}>
+        <Box position={"relative"} className={"hide-element"}>
           <Box
             position={"absolute"}
             right={"0px"}

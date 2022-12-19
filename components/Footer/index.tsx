@@ -6,7 +6,13 @@ import HeaderText from "../HeaderText";
 const Footer = () => {
   return (
     <Box pos={"relative"} p={"100px 40px 60px 40px"}>
-      <Box display={"flex"} position={"absolute"} top={"0px"} right={"55%"}>
+      <Box
+        display={"none"}
+        position={"absolute"}
+        top={"0px"}
+        right={"55%"}
+        className={"hide-element"}
+      >
         <Box
           position={"absolute"}
           width={"200px"}
@@ -28,7 +34,11 @@ const Footer = () => {
           transform={"rotate(25deg)"}
         />
       </Box>
-      <Box display={"flex"} justifyContent={"space-between"}>
+      <Box
+        display={"flex"}
+        justifyContent={"space-between"}
+        flexDir={{ base: "column", xl: "row" }}
+      >
         <Box>
           <Image
             marginBottom={"40px"}

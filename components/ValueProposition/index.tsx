@@ -54,7 +54,12 @@ const ValuePropositon = () => {
           <Category item={category[2]} />
         </Box>
       </Box>
-      <Box position={"absolute"} top={"270px"} right={"100px"}>
+      <Box
+        position={"absolute"}
+        top={"270px"}
+        right={"100px"}
+        className={"hide-element"}
+      >
         <Box
           position={"absolute"}
           height={"200px"}

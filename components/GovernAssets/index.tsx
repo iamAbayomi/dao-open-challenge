@@ -22,13 +22,16 @@ const GovernAssets = () => {
         <Box>
           <Image w={"500px"} alt={"firstsvg"} src={"./first-container.svg"} />
           <Image
-            margin={"52px 0px 0px 100px"}
+            margin={{ base: "52px 0px 0px 0px", xl: "52px 0px 0px 100px" }}
             w={"500px"}
             alt="secondsvg"
             src="./second-container.svg"
           />
         </Box>
-        <Box ml={"130px"} mt={{ base: "120px", xl: "0px" }}>
+        <Box
+          ml={{ base: "0px", xl: "130px" }}
+          mt={{ base: "120px", xl: "0px" }}
+        >
           <Text fontWeight={"700"} fontSize={"33px"}>
             Govern your Assests
           </Text>
