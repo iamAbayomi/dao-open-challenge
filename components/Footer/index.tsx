@@ -37,7 +37,8 @@ const Footer = () => {
       <Box
         display={"flex"}
         justifyContent={"space-between"}
-        flexDir={{ base: "column", xl: "row" }}
+        flexDir={{ base: "column", md: "row" }}
+        margin={"auto"}
       >
         <Box>
           <Image
@@ -59,7 +60,7 @@ const Footer = () => {
             />
           </Box>
         </Box>
-        <Text mt={"90px"} fontWeight={"330"} fontSize={"15px"}>
+        <Text m={"90px 0px 90px"} fontWeight={"330"} fontSize={"15px"}>
           The one-stop-shop to find, invest <br /> and vote in extraordinary
           DAOs
         </Text>

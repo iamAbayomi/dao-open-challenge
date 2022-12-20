@@ -78,7 +78,7 @@ const DiscoverDao = () => {
           </Box>
         </Box>
         <Box
-          display={"flex"}
+          display={{ base: "none", xl: "flex" }}
           background={"#FBFBFB"}
           p={"10px 20px"}
           ml={"30px"}

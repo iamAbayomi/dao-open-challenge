@@ -5,14 +5,14 @@
 
 @font-face {
   font-family: "Degular";
-  src: url("../public/fonts/Degular/Degular.otf") format("otf");
+  src: url("../public/fonts/Degular/Degular.woff") format("woff");
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Malgony, Degular}
+  font-family: Maglony, Degular}
 
 a {
   color: inherit;
@@ -23,6 +23,9 @@ a {
   box-sizing: border-box;
 }
 
+p {
+  font-family: Degular;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -35,6 +38,6 @@ a {
 }
 
 .head-text{
-  font-family: 'Malgony';
+  font-family: 'Maglony';
 }
 

@@ -8,7 +8,12 @@ const Banner = () => {
 
   return (
     <Box>
-      <Box background={"black"} h={"38px"} p={"8px"} boxSizing={"border-box"}>
+      <Box
+        background={"black"}
+        minH={"38px"}
+        p={"8px"}
+        boxSizing={"border-box"}
+      >
         <Box>
           <Image
             float={"right"}
@@ -24,7 +29,7 @@ const Banner = () => {
             maxWidth={"max-content"}
             margin={"0px auto 0px"}
           >
-            <Text color={"white"} textAlign={"center"} fontSize={"13px"}>
+            <Text color={"white"} textAlign={"center"} fontSize={"1rem"}>
               📹 Watch our Full Video Course on “Web3” & DAOs,{" "}
               <Span> Click Here</Span>
             </Text>

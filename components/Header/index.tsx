@@ -21,7 +21,7 @@ const Header = () => {
       //flexDir={{ base: "column", xl: "row" }}
       alignItems={"center"}
       justifyContent={"space-between"}
-      p={"24px 80px 24px"}
+      p={"24px 70px 20px"}
       boxSizing={"border-box"}
       borderBottom={"1px solid #CFCFCF"}
       background={isDark() ? "black" : "white"}
@@ -33,8 +33,9 @@ const Header = () => {
         />
         <Text
           ml={"20px"}
-          fontSize={"50px"}
+          fontSize={"40px"}
           fontWeight={"700"}
+          fontStyle={"bold"}
           color={isDark() ? "white" : "black"}
         >
           OpenDAO

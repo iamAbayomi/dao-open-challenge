@@ -11,29 +11,40 @@ const ValuePropositon = () => {
           <Box>
             <Text
               margin={"122px 0px 0px"}
-              fontFamily={"Malgony"}
+              fontFamily={"Maglony"}
               fontWeight={"700"}
-              fontSize={"7.625rem"}
+              fontSize={{ base: "2.75rem", md: "5rem", xl: "8.625rem" }}
               textAlign={"center"}
             >
               All DAO. In ONE.
             </Text>
           </Box>
 
-          <Text fontFamily={"Degular"} fontWeight={"400"} textAlign={"center"}>
+          <Text
+            fontFamily={"Degular"}
+            fontWeight={"400"}
+            textAlign={"center"}
+            p={"0px 20px"}
+          >
             Join the OpenDAO Community to discover, invest in, and vote on
             exceptional DAOs. You have the <br />
             power!
           </Text>
         </Box>
-        <Box margin={"60px auto 0px auto"} maxWidth={"max-content"}>
+        <Box
+          display={"flex"}
+          flexDir={{ base: "column", sm: "row" }}
+          gap={"40px"}
+          margin={"60px auto 0px auto"}
+          maxWidth={"max-content"}
+        >
           <Button background={"#C2EC5B"} p={"25px 30px"}>
             <Image alt="explore" src="./explore.svg" />
             <Text ml={"10px"} fontWeight={"400"}>
               Explore DAOs
             </Text>
           </Button>
-          <Button ml={"40px"} background={"white"}>
+          <Button background={"white"}>
             <Image alt="survey" src="./take-survey.svg" />
             <Text ml={"10px"} fontWeight={"400"}>
               Take Quick Survey
