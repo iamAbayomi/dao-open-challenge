@@ -14,22 +14,29 @@ const GovernAssets = () => {
         </Text>
       </Box>
 
-      <Box margin={"173px 0px 0px 0px"} display={"flex"}>
+      <Box
+        margin={"173px 0px 0px 0px"}
+        display={"flex"}
+        flexDir={{ base: "column", xl: "row" }}
+      >
         <Box>
           <Image w={"500px"} alt={"firstsvg"} src={"./first-container.svg"} />
           <Image
-            margin={"52px 0px 0px 100px"}
+            margin={{ base: "52px 0px 0px 0px", xl: "52px 0px 0px 100px" }}
             w={"500px"}
             alt="secondsvg"
             src="./second-container.svg"
           />
         </Box>
-        <Box ml={"130px"}>
+        <Box
+          ml={{ base: "0px", xl: "130px" }}
+          mt={{ base: "120px", xl: "0px" }}
+        >
           <Text fontWeight={"700"} fontSize={"33px"}>
             Govern your Assests
           </Text>
           {governAssets.map((item, index) => (
-            <Box key={index} mt={"61px"}>
+            <Box key={index} mt={"61px"} maxWidth={"max-content"}>
               <Box display={"flex"} alignItems={"center"} mt={"51px"}>
                 <Image alt="" src="discover.svg" />
                 <Text ml={"34px"} fontWeight={"300"}>

@@ -19,17 +19,52 @@ const GettingStartedSection = () => {
         </Text>
       </Box>
       <Box id={"getting-started-section"}>
+        <Box
+          position={"absolute"}
+          left={"0px"}
+          height={"200px"}
+          width={"100px"}
+          borderRadius={"100px"}
+          background={"rgba(255, 122, 0, 0.5)"}
+          filter={"blur(30px)"}
+          transform={"rotate(25deg)"}
+        />
+
         <Text fontWeight={"700"} fontSize={"40px"} textAlign={"center"}>
           Getting Started
         </Text>
+        <Box position={"relative"} className={"hide-element"}>
+          <Box
+            position={"absolute"}
+            right={"0px"}
+            height={"200px"}
+            width={"100px"}
+            borderRadius={"100px"}
+            background={"rgba(255, 122, 0, 0.5)"}
+            filter={"blur(30px)"}
+            transform={"rotate(25deg)"}
+          />
+          <Box
+            position={"absolute"}
+            top={"100px"}
+            right={"0px"}
+            width={"170px"}
+            height={"200px"}
+            background={"rgba(194, 236, 91, 0.5)"}
+            filter={"blur(30px)"}
+            transform={"rotate(25deg)"}
+          />
+        </Box>
+
         <Box margin={"auto"} maxW={"1000px"}>
           {gettingStartedData.map((item, index) => (
             <GettingStartedComponent key={index} text={item} />
           ))}
         </Box>
       </Box>
+
       <Box
-        margin={"275px auto 0px auto"}
+        margin={"275px auto 100px auto"}
         maxWidth={"1100px"}
         background={"#C2EC5B"}
         p={"60px 60px"}
@@ -41,6 +76,8 @@ const GettingStartedSection = () => {
           display={"flex"}
           alignItems={"center"}
           justifyContent={"space-between"}
+          flexDir={{ base: "column", xl: "row" }}
+          gap={"60px"}
         >
           <Text fontSize={"34px"} fontWeight={"740"}>
             Join our community.

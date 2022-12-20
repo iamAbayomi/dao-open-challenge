@@ -5,8 +5,41 @@ import HeaderText from "../HeaderText";
 
 const Footer = () => {
   return (
-    <Box p={"100px 40px 60px 60px"}>
-      <Box display={"flex"} justifyContent={"space-between"}>
+    <Box pos={"relative"} p={"100px 40px 60px 40px"}>
+      <Box
+        display={"none"}
+        position={"absolute"}
+        top={"0px"}
+        right={"55%"}
+        className={"hide-element"}
+      >
+        <Box
+          position={"absolute"}
+          width={"200px"}
+          height={"200px"}
+          borderRadius={"0px 0px 100px"}
+          background={"rgba(255, 122, 0, 0.5)"}
+          filter={"blur(30px)"}
+          transform={"rotate(25deg)"}
+        />
+        <Box
+          position={"absolute"}
+          top={"60px"}
+          height={"200px"}
+          width={"200px"}
+          left={"-115px"}
+          borderRadius={"100px"}
+          background={"rgba(194, 236, 91, 0.5)"}
+          filter={"blur(30px)"}
+          transform={"rotate(25deg)"}
+        />
+      </Box>
+      <Box
+        display={"flex"}
+        justifyContent={"space-between"}
+        flexDir={{ base: "column", md: "row" }}
+        margin={"auto"}
+      >
         <Box>
           <Image
             marginBottom={"40px"}
@@ -27,7 +60,7 @@ const Footer = () => {
             />
           </Box>
         </Box>
-        <Text mt={"60px"} fontWeight={"330"} fontSize={"15px"}>
+        <Text m={"90px 0px 90px"} fontWeight={"330"} fontSize={"15px"}>
           The one-stop-shop to find, invest <br /> and vote in extraordinary
           DAOs
         </Text>
@@ -43,7 +76,7 @@ const Footer = () => {
       <Box mt={"43px"} borderBottom={"0.5px solid #A1A1A1"} />
       <Box mt={"40px"} display={"flex"} justifyContent={"space-between"}>
         <Text>Made with ❤️ by Temidayo & Queennette</Text>
-        <Box display={"flex"}>
+        <Box display={"flex"} flexDir={{ base: "column", xl: "row" }}>
           {headerData?.map((item: IHeaderLink) => (
             <HeaderText key={item?.id} name={item?.name} link={item?.link} />
           ))}

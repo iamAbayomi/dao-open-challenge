@@ -15,7 +15,7 @@ export default function Home() {
         <Banner />
         <Header />
         <ValuePropositon />
-        <Box margin={"200px 0px 20px 50px"}>
+        <Box margin={{ base: "200px 30px 0px", xl: "200px 0px 20px 50px" }}>
           <DiscoverSection />
           <DaoContribution />
           <GovernAssets />

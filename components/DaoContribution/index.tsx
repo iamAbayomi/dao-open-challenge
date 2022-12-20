@@ -25,7 +25,14 @@ const DaoContribution = () => {
           We have over 1,000 Active DAOs for you to Explore
         </Text>
       </Box>
-      <Box m={"140px auto 100px"} maxWidth={"900px"} display={"flex"}>
+      <Box
+        m={"140px auto 100px"}
+        maxWidth={{ base: "max-content", xl: "900px" }}
+        display={"flex"}
+        gap={"50px"}
+        flexDir={{ base: "column", xl: "row" }}
+        // border={"1px solid grey"}
+      >
         {infoData.map((item: IInfoContainer) => (
           <InfoContainer key={item.id} item={item} />
         ))}

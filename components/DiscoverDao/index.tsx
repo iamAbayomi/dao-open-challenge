@@ -51,7 +51,7 @@ const DiscoverDao = () => {
       <Box margin={"32px 0px 0px 0px"} display={"flex"} alignItems={"center"}>
         <Box
           height={"70px"}
-          width={"700px"}
+          width={"43.75rem"}
           border={"1px solid #BEBEBE"}
           borderRadius={"20px"}
           background={"#FBFBFB"}
@@ -78,7 +78,7 @@ const DiscoverDao = () => {
           </Box>
         </Box>
         <Box
-          display={"flex"}
+          display={{ base: "none", xl: "flex" }}
           background={"#FBFBFB"}
           p={"10px 20px"}
           ml={"30px"}
@@ -95,7 +95,7 @@ const DiscoverDao = () => {
 
       <Box
         mt={"49px"}
-        display={"flex"}
+        display={"none"}
         width={"100%"}
         gap={"40px"}
         alignItems={"center"}

@@ -4,9 +4,11 @@
 .dao-container + .dao-container{
     margin-left: 100px;
 }
-.info-container + .info-container{
-    margin-left: 50px;
-}
+
 .pointer {
   cursor: pointer;
+}
+
+.hide-element{
+  display: none;
 }

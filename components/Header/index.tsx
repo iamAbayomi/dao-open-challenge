@@ -18,9 +18,10 @@ const Header = () => {
   return (
     <Box
       display={"flex"}
+      //flexDir={{ base: "column", xl: "row" }}
       alignItems={"center"}
       justifyContent={"space-between"}
-      p={"24px 80px 24px"}
+      p={"24px 70px 20px"}
       boxSizing={"border-box"}
       borderBottom={"1px solid #CFCFCF"}
       background={isDark() ? "black" : "white"}
@@ -32,14 +33,15 @@ const Header = () => {
         />
         <Text
           ml={"20px"}
-          fontSize={"50px"}
+          fontSize={"40px"}
           fontWeight={"700"}
+          fontStyle={"bold"}
           color={isDark() ? "white" : "black"}
         >
           OpenDAO
         </Text>
       </Box>
-      <Box display={"flex"}>
+      <Box display={{ base: "none", xl: "flex" }} gap={"20px"}>
         {headerData?.map((item: IHeaderLink) => (
           <HeaderText
             key={item?.id}
@@ -50,7 +52,7 @@ const Header = () => {
           />
         ))}
       </Box>
-      <Button background={"#C2EC5B"}>
+      <Button display={{ base: "none", xl: "flex" }} background={"#C2EC5B"}>
         <Image alt={"link"} src={"./link.svg"} />
         <Text color={"black"} fontWeight={"400"}>
           Connect Wallet
