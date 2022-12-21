@@ -34,6 +34,7 @@ const Banner = () => {
               <Span> Click Here</Span>
             </Text>
             <Image
+              display={{ base: "none", sm: "block" }}
               ml={"6px"}
               height={"18px"}
               width={"18px"}
