@@ -11,9 +11,7 @@ const Index = () => {
   const Span = styled.span`
     color: #c2ec5b;
   `;
-
   const recommendDao = hotDaoData.concat(newDaoData);
-  console.log("recommendDao", recommendDao);
 
   return (
     <HomeLayout>
@@ -28,7 +26,12 @@ const Index = () => {
           >
             <Text fontSize={"200px"}>🎉</Text>
             <Text>Congratualtions , we found the right DAO for you!</Text>
-            <Text mt={"10px"} fontWeight={"700"} fontSize={"50px"}>
+            <Text
+              m={"10px 20px 0px"}
+              fontFamily={"Maglony"}
+              fontWeight={"700"}
+              fontSize={"50px"}
+            >
               From the entry you submitted,
               <br /> we found out that you’re <Span>Investment</Span>{" "}
               Interested.
@@ -68,11 +71,12 @@ const Index = () => {
         </Box>
         <Box
           display={"grid"}
-          gridTemplateColumns={"auto auto auto"}
+          gridTemplateColumns={"repeat(auto-fit, minmax(300px, 1fr))"}
           margin={"50px auto"}
-          maxWidth={"1200px"}
+          maxWidth={{ base: "400px", md: "832px", lg: "1280px" }}
           gap={"30px"}
           rowGap={"40px"}
+          p={"20px 40px"}
         >
           {recommendDao?.map((item: IDaoContainer) => (
             <RecommendedDaos key={item?.id} item={item} />
