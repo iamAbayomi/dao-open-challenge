@@ -10,7 +10,7 @@ type props = {
 
 const HomeLayout = ({ children }: props) => {
   return (
-    <Box>
+    <Box margin={"auto"} maxWidth={"2000px"}>
       <Header />
       {children}
       <Footer />
