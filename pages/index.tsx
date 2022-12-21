@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <Box>
-      <Box pb={"0px"}>
+      <Box pb={"0px"} margin={"auto"} maxWidth={"2000px"}>
         <Banner />
         <Header />
         <ValuePropositon />
