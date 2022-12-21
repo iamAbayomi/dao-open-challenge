@@ -1,5 +1,6 @@
 import { Box, Text, Image, Input } from "@chakra-ui/react";
 import HomeLayout from "../../components/Layout/HomeLayout";
+import { alphabetData } from "../../utils/dummydata";
 
 const Index = () => {
   return (
@@ -10,9 +11,14 @@ const Index = () => {
           <Text color={"#000000"}> {" > "} Glossary</Text>
         </Box>
         <Box>
-          <Box mt={"146px"} display={"flex"} gap={"50px"}>
+          <Box
+            mt={"146px"}
+            display={"flex"}
+            gap={"50px"}
+            flexDir={{ base: "column", sm: "row" }}
+          >
             <Image alt={"chinese-symbol"} src={"./chinese-symbol.svg"} />
-            <Text fontWeight={"700"} fontSize={"56px"}>
+            <Text fontWeight={"700"} fontSize={"3.5rem"}>
               Glossary
             </Text>
           </Box>
@@ -42,18 +48,29 @@ const Index = () => {
               border={"none"}
             />
           </Box>
-          <Box mt={"54px"} display={"flex"} gap={"20px"}>
-            <Box background={"#C2EC5B"} p={"10px 15px"} borderRadius={"10px"}>
-              <Text fontWeight={"700"}>A</Text>
-            </Box>
-            <Box background={"white"} p={"10px 15px"} borderRadius={"10px"}>
-              <Text fontWeight={"700"}>B</Text>
-            </Box>
+          <Box mt={"54px"} maxWidth={"834px"} display={"grid"} gap={"20px"}>
+            {alphabetData?.map((item: string, index: number) => (
+              <Box
+                key={index}
+                background={"white"}
+                p={"10px 15px"}
+                borderRadius={"10px"}
+                maxWidth={"max-content"}
+                gridTemplateColumns={""}
+              >
+                <Text fontWeight={"700"}>{item}</Text>
+              </Box>
+            ))}
           </Box>
         </Box>
       </Box>
       <Box mt={"95px"}>
-        <Box display={"flex"} gap={"100px"} mr={"60px"} alignItems={"start"}>
+        <Box
+          display={"flex"}
+          alignItems={"start"}
+          flexDir={{ base: "column", sm: "row" }}
+          flex={"wrap"}
+        >
           <Box
             background={"#C2EC5B"}
             p={"29px 90px"}
@@ -69,10 +86,10 @@ const Index = () => {
             {[1, 2, 3, 4, 5].map((item) => (
               <Box
                 key={item}
-                p={"20px 30px"}
+                p={"40px 30px"}
                 border={"0.1px solid black"}
                 borderRadius={"10px"}
-                mb={"30px"}
+                m={{ base: "50px 30px 50px 30px", sm: "0px 30px 50px 100px" }}
               >
                 <Box display={"flex"} gap={"10px"} alignItems={"center"}>
                   <Text fontWeight={"700"} fontSize={"30px"}>
