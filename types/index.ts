@@ -55,3 +55,15 @@ export interface ICategories {
     subtitle: string
     background: string
 }
+
+export interface IGlossaryData {
+    id?: number
+    title: string
+    tags: string
+    description: string
+}
+
+export interface IGlossaryIndex {
+    index: string
+    data: IGlossaryData[]    
+}

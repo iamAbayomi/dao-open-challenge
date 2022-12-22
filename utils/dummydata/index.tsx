@@ -3,6 +3,8 @@ import {
   IBadge,
   ICategories,
   IDaoContainer,
+  IGlossaryData,
+  IGlossaryIndex,
   IHeaderLink,
   IInfoContainer,
   IItem
@@ -232,5 +234,114 @@ export const categoriesData: ICategories[] = [
     subtitle:
       "Execute an external contract function e.g. swapping assets in the DAO bank",
     background: "#FF8686"
+  }
+];
+
+export const alphabetData = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z"
+];
+
+export const glossaryData: IGlossaryIndex[] = [
+  {
+    index: "A",
+    data: [
+      {
+        title: "Airdrop",
+        tags: "(noun, verb)",
+        description: `a marketing technique in which crypto projects send their native tokens directly to the wallets of their users in an effort to increase awareness and adoption.
+    Alpha (noun)`
+      },
+      {
+        title: "Alpha",
+        tags: "(noun)",
+        description: `valuable or insider information, usually regarding the value of digital assets like cryptocurrencies and NFTs; a measure of the return on an investment over and above the return offered by the market or other benchmark.`
+      },
+      {
+        title: "Altcoin",
+        tags: "(noun)",
+        description: `initially used to refer to any cryptocurrency that wasn’t Bitcoin, altcoin may now refer to any new cryptocurrency with a relatively small market cap.`
+      },
+
+      {
+        title: "ATH- All Time High",
+        tags: "(noun)",
+        description: `the highest price an asset has ever had.`
+      },
+      {
+        title: "ATL- All Time Low",
+        tags: "(noun)",
+        description: `the lowest price an asset has ever had.`
+      }
+    ]
+  },
+  {
+    index: "B",
+    data: [
+      {
+        title: "Bear Market",
+        tags: "(noun, verb)",
+        description: `a prolonged period of decline in a financial market.`
+      },
+      {
+        title: "Bearish",
+        tags: "(adjective)",
+        description: `similar to a bear market, this refers to holding a pessimistic view of a market or asset’s value. If you are bearish on a certain cryptocurrency, you believe its value will decrease over time. Those who are bearish may be referred to as bears, sometimes purposely misspelled as beras
+        `
+      },
+      {
+        title: "Bitcoin",
+        tags: "(noun)",
+        description: `the very first decentralized, peer-to-peer, digital currency, created by the pseudonymous Satoshi Nakamoto in 2009.
+        `
+      },
+      {
+        title: "",
+        tags: "",
+        description: ``
+      },
+      {
+        title: "",
+        tags: "",
+        description: ``
+      }
+    ]
+  }
+];
+
+const same: IGlossaryData[] = [
+  {
+    title: "",
+    tags: "",
+    description: ``
+  },
+  {
+    title: "",
+    tags: "",
+    description: ``
   }
 ];
