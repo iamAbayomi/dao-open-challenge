@@ -320,14 +320,202 @@ export const glossaryData: IGlossaryIndex[] = [
         `
       },
       {
-        title: "",
-        tags: "",
-        description: ``
+        title: "Blockchain",
+        tags: "(noun)",
+        description: `a publicly-accessible digital ledger used to store and transfer information without the need for a central authority. Blockchains are the core technology on which cryptocurrency protocols like Bitcoin and Ethereum are built.
+        `
+      },
+      {
+        title: "Block Explorer",
+        tags: "(noun)",
+        description: `a tool for browsing information on a blockchain, such as transactions, wallet addresses, market caps, and hash rates.
+        `
+      },
+      {
+        title: "Burn",
+        tags: "(verb)",
+        description: `the process of removing tokens from a cryptocurrency’s circulating supply, usually done by sending them to an inaccessible wallet address. Other digital assets, such as NFTs, can also be burned via the same process. `
       },
       {
         title: "",
         tags: "",
         description: ``
+      }
+    ]
+  },
+  {
+    index: "C",
+    data: [
+      {
+        title: "Centralized",
+        tags: "(adjective)",
+        description: `a hierarchical structure in which authority and control are concentrated within a small group of decision makers.
+        `
+      },
+      {
+        title: "CEX- Centralized Exchange",
+        tags: "(noun)",
+        description: `a cryptocurrency exchange managed by a centralized business or entity. i.e. Coinbase, Gemini, Kraken`
+      },
+      {
+        title: "CeFi- Centralized Finance",
+        tags: "(noun)",
+        description: `centralized businesses that participate in crypto. I.e. BlockFi, DCG, Grayscale`
+      },
+      {
+        title: "Coin",
+        tags: "(noun)",
+        description: `a cryptocurrency built on its own native blockchain, intended to be used as a store of value and medium of exchange within that ecosystem.  i.e. BTC, ETH`
+      },
+      {
+        title: "Collateral",
+        tags: "(noun)",
+        description: `any asset accepted as security for a loan, such as a physical asset like real estate, or a digital asset like an NFT.`
+      },
+      {
+        title: "Cold Wallet",
+        tags: "(noun)",
+        description: `an offline device used to store cryptocurrencies. Cold wallets can be hardware devices or simply sheets of paper containing a user’s private keys. Because cold wallets are not connected to the internet, they are generally a safer method of storing cryptocurrencies.
+        See also: hot wallet (antonym)`
+      },
+      {
+        title: "Consensus",
+        tags: "(noun)",
+        description: `the state of agreement amongst the nodes on a blockchain. Reaching consensus is necessary for new transactions to be verified and new blocks to be added to the blockchain.`
+      },
+      {
+        title: "Cryptocurrency",
+        tags: "(noun)",
+        description: `a digital asset designed to be used as a medium of exchange. Cryptocurrencies are borderless, secure, and maintained by blockchains as opposed to centralized banks or governments.`
+      }
+    ]
+  },
+  {
+    index: "D",
+    data: [
+      {
+        title: "DAO- Decentralized Autonomous Organization",
+        tags: "(noun)",
+        description: `an organization based on open-source code and governed by its users. DAOs typically focus on a specific project or mission and trade the traditional hierarchical systems of legacy corporations for guidelines written on the blockchain. 
+        `
+      },
+      {
+        title: "Dapp- Decentralized Application",
+        tags: "(noun)",
+        description: `an application built on open-source code that lives on the blockchain. Dapps exist independent of centralized groups or figures and often incentivize users to maintain them through rewarded tokens.
+        `
+      },
+      {
+        title: "Decentralized",
+        tags: "(adjective)",
+        description: `a system that operates without the control of a central figure or authority, and replaces it with a distributed peer-to-peer network.
+        `
+      },
+      {
+        title: "Degen",
+        tags: "(noun, adjective)",
+        description: `initially short for “degenerate gambler.” While this still refers to individuals involved with risky bets, degen may also refer more broadly to anyone involved in crypto and financial spaces. Like with “ape,” this is generally a self-assigned term and does not carry a negative connotation. Degens are a proud people who enjoy ridiculous call options on GME, buying the dip before paying their rent, and occasionally aping into shitcoins. 
+        `
+      },
+      {
+        title: "DeFi- Decentralized Finance",
+        tags: "(noun)",
+        description: `the ecosystem of borderless, trustless, peer-to-peer financial tools being built on public blockchains without the use of banks. DeFi apps are built to be open and interconnected, allowing them to be used in conjunction with one another.
+        `
+      },
+      {
+        title: "DEX- Decentralized Exchange",
+        tags: "(noun)",
+        description: `a peer-to-peer cryptocurrency exchange built on the blockchain. A DEX is run by its users and smart contracts instead of an intermediary figure or centralized institution. 
+        `
+      },
+      {
+        title: "DYOR- Do Your Own Research ",
+        tags: "",
+        description: `similar to DD, this phrase is used to remind people to conduct their own investigation into an asset before investing in it. 
+        `
+      }
+    ]
+  },
+  {
+    index: "E",
+    data: [
+      {
+        title: "EIP- Ethereum Improvement Proposal",
+        tags: "(noun)",
+        description: `a standard format for presenting a new feature or process to the Ethereum community.`
+      },
+      {
+        title: "EIP- Ethereum Improvement Proposal",
+        tags: "(noun)",
+        description: `a standard format for presenting a new feature or process to the Ethereum community.`
+      },
+      {
+        title: "ERC- Ethereum Request for Comments",
+        tags: "(noun)",
+        description: `the standard smart contract outline on which Ethereum-based smart contracts are built. `
+      },
+      {
+        title: "ERC-20",
+        tags: "(noun)",
+        description: `the Ethereum token standard, providing a standardized smart contract structure for fungible tokens.`
+      },
+      {
+        title: "ERC-721",
+        tags: "(noun)",
+        description: `an Ethereum token standard that allows for the formation of unique tokens, otherwise known as NFTs, or non-fungible tokens. Unlike the ERC-20 standard, ERC-721 tokens have specific properties that allow each to be uniquely identified and valued independently of one another.
+        `
+      },
+      {
+        title: "ERC-1155",
+        tags: "(noun)",
+        description: `an Ethereum token standard which allows for fungible, non-fungible, and semi-fungible tokens to be managed by a single smart contract simultaneously. These are commonly used in gaming and collectible trading to reduce the number of necessary transactions.`
+      },
+      {
+        title: "Ethereum",
+        tags: "(noun)",
+        description: `a public blockchain serving as the foundation for decentralized applications. Ethereum is a turing complete language, allowing for users to write and deploy complex, self-executing smart contracts which live on the blockchain. `
+      }
+    ]
+  },
+  {
+    index: "F",
+    data: [
+      {
+        title: "Fiat",
+        tags: "(noun)",
+        description: `a currency established as legal tender, often backed and regulated by a government, such as the US Dollar. 
+        `
+      },
+      {
+        title: "Flippening",
+        tags: "(noun)",
+        description: `a reference to the possible event of Ethereum becoming more valuable than Bitcoin, in terms of market cap. DISCLAIMER: Please do not mention the flippening to Bitcoin maxis. They will not think it is funny, and they will proceed to explain why Ethereum is a shitcoin.`
+      },
+      {
+        title: "FOMO- Fear Of Missing Out",
+        tags: "(noun)",
+        description: `a feeling of anxiety, stemming from missing out on an opportunity. In investing, this usually coincides with investors buying an asset after it has already seen a considerable increase in price, hoping to get in and out before a pullback occurs. This is known as “FOMOing in” or “aping in.`
+      },
+      {
+        title: "Fork",
+        tags: "(noun, verb)",
+        description: `a change to a blockchain’s protocol. When these changes are minor, this results in a soft fork. When the changes are more fundamental, this may result in a hard fork, leading to the formation of a separate chain with different rules.`
+      },
+      {
+        title: "FUD- Fear, Uncertainty, and Doubt",
+        tags: "(noun)",
+        description: `news around an asset that seems negative, but turns out to be false or blown out of proportion.`
+      },
+      {
+        title: "Full Node",
+        tags: "(noun)",
+        description: `a blockchain node which stores the blockchain’s complete history, as well as verifies and relays transactions.`
+      },
+      {
+        title: "Fungible",
+        tags: "(adjective)",
+        description: `interchangeable; exchangeable with something else of the same kind.`
       }
     ]
   }

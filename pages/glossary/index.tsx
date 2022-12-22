@@ -1,8 +1,12 @@
 import { Box, Text, Image, Input } from "@chakra-ui/react";
+import { useState } from "react";
+import GlossaryContainer from "../../components/GlossaryContainer";
 import HomeLayout from "../../components/Layout/HomeLayout";
-import { alphabetData } from "../../utils/dummydata";
+import { IGlossaryData, IGlossaryIndex } from "../../types";
+import { alphabetData, glossaryData } from "../../utils/dummydata";
 
 const Index = () => {
+  const [state, setState] = useState<string>("white");
   return (
     <HomeLayout>
       <Box p={"50px 60px"} background={"#F6F6F6"}>
@@ -56,70 +60,59 @@ const Index = () => {
             maxWidth={{ sm: "500px", md: "700px", lg: "900px" }}
             gridTemplateColumns={{
               base: "repeat(auto-fill, minmax(50px, 1fr))",
-              // md: "repeat(8,minmax(50px, 1fr))",
               xl: "repeat(16, minmax(50px, 1fr))"
             }}
-            // gridTemplateColumns={"repeat(auto-fill, minmax(50px, 1fr))"}
-            // border={"1px solid black"}
           >
             {alphabetData?.map((item: string, index: number) => (
               <Box
                 key={index}
                 background={"white"}
-                p={"10px 15px"}
+                p={"10px 20px"}
                 borderRadius={"10px"}
                 maxWidth={"max-content"}
                 gridTemplateColumns={""}
-                border={"1px solid black"}
+                border={"1px solid white"}
               >
-                <Text fontWeight={"700"}>{item}</Text>
+                <Text
+                  fontStyle={"bold"}
+                  fontWeight={"700"}
+                  fontSize={"18px"}
+                  color={"black"}
+                >
+                  {item}
+                </Text>
               </Box>
             ))}
           </Box>
         </Box>
       </Box>
       <Box mt={"95px"}>
-        <Box
-          display={"flex"}
-          alignItems={"start"}
-          flexDir={{ base: "column", sm: "row" }}
-          flex={"wrap"}
-        >
+        {glossaryData?.map((item: IGlossaryIndex, index: number) => (
           <Box
-            background={"#C2EC5B"}
-            p={"29px 90px"}
-            maxWidth={"max-content"}
-            borderRadius={"10px"}
+            key={index}
+            display={"flex"}
+            alignItems={"start"}
+            flexDir={{ base: "column", sm: "row" }}
+            flex={"wrap"}
           >
-            <Text fontWeight={"700"} fontSize={"50px"}>
-              A
-            </Text>
-          </Box>
+            <Box
+              background={"#C2EC5B"}
+              p={"29px 90px"}
+              maxWidth={"max-content"}
+              borderRadius={"10px"}
+            >
+              <Text fontWeight={"700"} fontSize={"50px"}>
+                {item?.index}
+              </Text>
+            </Box>
 
-          <Box width={"100%"} maxWidth={"1200px"}>
-            {[1, 2, 3, 4, 5].map((item) => (
-              <Box
-                key={item}
-                p={"40px 30px"}
-                border={"0.1px solid black"}
-                borderRadius={"10px"}
-                m={{ base: "50px 30px 50px 30px", sm: "0px 30px 50px 100px" }}
-              >
-                <Box display={"flex"} gap={"10px"} alignItems={"center"}>
-                  <Text fontWeight={"700"} fontSize={"30px"}>
-                    Airdrop
-                  </Text>
-                  <Text>(noun, verb)</Text>
-                </Box>
-                <Text maxWidth={"800px"}>
-                  a marketing technique in which crypto projects send their
-                  native tokens directly to the wallets of their users in an
-                  effort to increase awareness and adoption. Alpha (noun)
-                </Text>
-              </Box>
-            ))}
+            <Box width={"100%"} maxWidth={"1200px"}>
+              {item?.data?.map((item: IGlossaryData, index: number) => (
+                <GlossaryContainer key={index} item={item} />
+              ))}
+            </Box>
           </Box>
-        </Box>
+        ))}
       </Box>
     </HomeLayout>
   );
