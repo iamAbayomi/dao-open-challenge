@@ -32,7 +32,7 @@ const Index = () => {
             display={"flex"}
             gap={"23px"}
             p={"0px 20px"}
-            mt={"90px"}
+            m={"90px 20px 0px 0px"}
             background={"white"}
             maxWidth={"850px"}
             border={"1px solid #BEBEBE"}
@@ -48,7 +48,20 @@ const Index = () => {
               border={"none"}
             />
           </Box>
-          <Box mt={"54px"} maxWidth={"834px"} display={"grid"} gap={"20px"}>
+          <Box
+            m={"54px 0px"}
+            display={"grid"}
+            gap={"20px"}
+            gridColumnGap={"20px"}
+            maxWidth={{ sm: "500px", md: "700px", lg: "900px" }}
+            gridTemplateColumns={{
+              base: "repeat(auto-fill, minmax(50px, 1fr))",
+              // md: "repeat(8,minmax(50px, 1fr))",
+              xl: "repeat(16, minmax(50px, 1fr))"
+            }}
+            // gridTemplateColumns={"repeat(auto-fill, minmax(50px, 1fr))"}
+            // border={"1px solid black"}
+          >
             {alphabetData?.map((item: string, index: number) => (
               <Box
                 key={index}
@@ -57,6 +70,7 @@ const Index = () => {
                 borderRadius={"10px"}
                 maxWidth={"max-content"}
                 gridTemplateColumns={""}
+                border={"1px solid black"}
               >
                 <Text fontWeight={"700"}>{item}</Text>
               </Box>
