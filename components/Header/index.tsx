@@ -1,63 +1,71 @@
-import { Box, Button, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Text, Image, CloseButton } from "@chakra-ui/react";
 import { useRouter } from "next/router";
+import { useState } from "react";
 import { IHeaderLink } from "../../types";
 import { headerData } from "../../utils/dummydata";
-import HeaderText from "../HeaderText";
+import { useIsDarkMode } from "../../utils/helpers";
+import { IoMdClose } from "react-icons/io";
+import HeaderComponent from "./HeaderComponent";
+import ResponsiveMenuHeaderComponent from "./ResponsiveMenuHeaderComponent";
 
 const Header = () => {
   const router = useRouter();
-  function isDark() {
-    return router.pathname === "/aboutus" ||
-      router.pathname === "/recommendedDaos"
-      ? true
-      : false;
+  const isDark = useIsDarkMode();
+  const [showMenu, setShowMenu] = useState<boolean>(false);
+
+  function toggleMenu() {
+    setShowMenu(!showMenu);
   }
+
   function moveToHomePage() {
     router.push("/");
   }
+
   return (
-    <Box
-      display={"flex"}
-      //flexDir={{ base: "column", xl: "row" }}
-      alignItems={"center"}
-      justifyContent={"space-between"}
-      p={"24px 70px 20px"}
-      boxSizing={"border-box"}
-      borderBottom={"1px solid #CFCFCF"}
-      background={isDark() ? "black" : "white"}
-    >
-      <Box display={"flex"} onClick={moveToHomePage} className={"pointer"}>
-        <Image
-          alt={"open-dao-logo"}
-          src={isDark() ? "app-logo-green.svg" : "opendao.svg"}
-        />
-        <Text
-          ml={"20px"}
-          fontSize={"40px"}
-          fontWeight={"700"}
-          fontStyle={"bold"}
-          color={isDark() ? "white" : "black"}
+    <Box>
+      <HeaderComponent showMenu={showMenu} toggleMenu={toggleMenu} />
+
+      {showMenu && (
+        <Box
+          position={"fixed"}
+          top={"0"}
+          width={"100%"}
+          height={"100vh"}
+          background={"#C2EC5B"}
+          zIndex={"10000"}
         >
-          OpenDAO
-        </Text>
-      </Box>
-      <Box display={{ base: "none", xl: "flex" }} gap={"20px"}>
-        {headerData?.map((item: IHeaderLink) => (
-          <HeaderText
-            key={item?.id}
-            name={item?.name}
-            link={item?.link}
-            color={isDark() ? "white" : "black"}
-            isDark={isDark()}
-          />
-        ))}
-      </Box>
-      <Button display={{ base: "none", xl: "flex" }} background={"#C2EC5B"}>
-        <Image alt={"link"} src={"./link.svg"} />
-        <Text color={"black"} fontWeight={"400"}>
-          Connect Wallet
-        </Text>
-      </Button>
+          <Box margin={"50px 40px 0px 0px"} float={"right"}>
+            <IoMdClose size={"42px"} color={"black"} onClick={toggleMenu} />
+          </Box>
+
+          <Box maxWidth={"300px"} margin={"20vh auto 50px"}>
+            <Box gap={"20px"}>
+              {headerData?.map((item: IHeaderLink) => (
+                <ResponsiveMenuHeaderComponent
+                  key={item?.id}
+                  name={item?.name}
+                  link={item?.link}
+                  color={isDark ? "white" : "black"}
+                  isDark={isDark}
+                />
+              ))}
+            </Box>
+
+            <Button
+              mt={"60px"}
+              background={"white"}
+              p={"30px 40px 30px"}
+              borderRadius={"5px"}
+              boxSizing={"border-box"}
+            >
+              <Image alt={"link"} src={"./link.svg"} />
+              <Text color={"black"} fontSize={"24px"} fontWeight={"400"}>
+                Connect Wallet
+              </Text>
+            </Button>
+          </Box>
+        </Box>
+      )}
     </Box>
   );
 };
