@@ -28,10 +28,9 @@ const HeaderComponent = ({ showMenu, toggleMenu }: IProps) => {
     <Box>
       <Box
         display={"flex"}
-        //flexDir={{ base: "column", xl: "row" }}
         alignItems={"center"}
         justifyContent={"space-between"}
-        p={"24px 70px 20px"}
+        p={{ base: "24px 20px 20px 20px", md: "24px 70px 20px" }}
         boxSizing={"border-box"}
         borderBottom={"1px solid #CFCFCF"}
         background={isDark() ? "black" : "white"}
