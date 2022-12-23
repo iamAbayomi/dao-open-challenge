@@ -12,7 +12,12 @@ const HeaderText = ({ name, link = "", color, isDark }: IProps) => {
   return (
     <Link href={link}>
       <Box display={"flex"} m={"0px 10px 0px"} alignItems={"center"}>
-        <Text color={color} fontWeight={"400"}>
+        <Text
+          textAlign={"center"}
+          color={color}
+          fontWeight={"400"}
+          fontSize={"1rem"}
+        >
           {name}
         </Text>
         <Image
