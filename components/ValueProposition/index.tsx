@@ -6,7 +6,7 @@ import Category from "../Category";
 const ValuePropositon = () => {
   return (
     <Box>
-      <Box position={"relative"} margin={"0px auto 0px "} maxW={"max-content"}>
+      <Box margin={"0px auto 0px "} maxW={"max-content"}>
         <Box>
           <Box>
             <Text
@@ -67,9 +67,9 @@ const ValuePropositon = () => {
       </Box>
       <Box
         position={"absolute"}
-        top={"270px"}
-        right={"100px"}
-        //  className={"hide-element"}
+        top={"300px"}
+        right={{ base: "50%", sm: "150px" }}
+        zIndex={"2000"}
       >
         <Box
           position={"absolute"}
