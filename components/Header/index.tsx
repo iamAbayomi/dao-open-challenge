@@ -13,15 +13,10 @@ interface IProps {
 }
 
 const Header = ({ isDark }: IProps) => {
-  const router = useRouter();
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
   function toggleMenu() {
     setShowMenu(!showMenu);
-  }
-
-  function moveToHomePage() {
-    router.push("/");
   }
 
   return (

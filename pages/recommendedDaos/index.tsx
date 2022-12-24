@@ -14,7 +14,7 @@ const Index = () => {
   const recommendDao = hotDaoData.concat(newDaoData);
 
   return (
-    <HomeLayout>
+    <HomeLayout isDark>
       <Box>
         <Box width={"100%"} background={"black"}>
           <Box

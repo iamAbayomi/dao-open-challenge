@@ -10,7 +10,7 @@ import { categoriesData, detailedDao } from "../../utils/dummydata";
 
 const Index = () => {
   return (
-    <HomeLayout>
+    <HomeLayout isDark={false}>
       <Box>
         <Box display={"flex"} justifyContent={"space-between"} m={"100px 50px"}>
           <Box>

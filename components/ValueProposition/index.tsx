@@ -1,9 +1,18 @@
 import { Box, Button, Text, Image } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import { ICategory } from "../../types";
 import { category } from "../../utils";
+import { useViewPage } from "../../utils/helpers";
 import Category from "../Category";
+import SubmitDao from "../SubmitDao";
 
 const ValuePropositon = () => {
+  const router = useRouter();
+
+  function viewPage(path: string) {
+    router.push(path);
+  }
+
   return (
     <Box>
       <Box margin={"0px auto 0px "} maxW={"max-content"}>
@@ -38,13 +47,23 @@ const ValuePropositon = () => {
           margin={"60px auto 0px auto"}
           maxWidth={"max-content"}
         >
-          <Button background={"#C2EC5B"} p={"25px 30px"}>
+          <Button
+            background={"#C2EC5B"}
+            p={"25px 30px"}
+            _hover={{ background: "#C2EC5B" }}
+            onClick={() => viewPage("/explore")}
+          >
             <Image alt="explore" src="./explore.svg" />
             <Text ml={"10px"} fontWeight={"400"}>
               Explore DAOs
             </Text>
           </Button>
-          <Button background={"white"}>
+
+          <Button
+            background={"white"}
+            p={"25px 30px"}
+            _hover={{ background: "white" }}
+          >
             <Image alt="survey" src="./take-survey.svg" />
             <Text ml={"10px"} fontWeight={"400"}>
               Take Quick Survey
@@ -91,32 +110,9 @@ const ValuePropositon = () => {
           transform={"rotate(25deg)"}
         />
       </Box>
+      <SubmitDao />
     </Box>
   );
 };
 
 export default ValuePropositon;
-
-// <Box>
-//           <Box
-//             position={"fixed"}
-//             top={"270px"}
-//             right={"0px"}
-//             height={"200px"}
-//             width={"100px"}
-//             borderRadius={"100px"}
-//             background={"rgba(255, 122, 0, 0.5)"}
-//             filter={"blur(30px)"}
-//             transform={"rotate(25deg)"}
-//           />
-//           <Box
-//             position={"fixed"}
-//             top={"400px"}
-//             right={"20px"}
-//             width={"120px"}
-//             height={"200px"}
-//             background={"rgba(194, 236, 91, 0.5)"}
-//             filter={"blur(30px)"}
-//             transform={"rotate(25deg)"}
-//           />
-//         </Box>

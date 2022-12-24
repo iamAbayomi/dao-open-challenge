@@ -6,3 +6,8 @@ export const useIsDarkMode = () => {
     ? true
     : false;
 };
+
+export const useViewPage = (page: string) => {
+  const router = useRouter();
+  router.push(`${page}`);
+};

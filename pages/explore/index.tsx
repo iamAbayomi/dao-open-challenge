@@ -8,7 +8,7 @@ const DiscoverSection = dynamic(
 
 const Index = () => {
   return (
-    <HomeLayout>
+    <HomeLayout isDark={false}>
       <Box margin={"100px 0px 20px 50px"}>
         <DiscoverSection />
       </Box>
