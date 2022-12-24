@@ -1,7 +1,7 @@
 import { Box, Text, Image, Input } from "@chakra-ui/react";
 import { useState } from "react";
 import GlossaryContainer from "../../components/GlossaryContainer";
-import HomeLayout from "../../components/Layout/HomeLayout";
+import HomeLayout from "../../layout/HomeLayout";
 import { IGlossaryData, IGlossaryIndex } from "../../types";
 import { alphabetData, glossaryData } from "../../utils/dummydata";
 

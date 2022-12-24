@@ -7,19 +7,13 @@ import { GrMenu } from "react-icons/gr";
 import { RiMenuLine } from "react-icons/ri";
 
 interface IProps {
+  isDark: boolean;
   showMenu: boolean;
   toggleMenu: () => void;
 }
 
-const HeaderComponent = ({ showMenu, toggleMenu }: IProps) => {
+const HeaderComponent = ({ isDark, toggleMenu }: IProps) => {
   const router = useRouter();
-
-  function isDark() {
-    return router.pathname === "/aboutus" ||
-      router.pathname === "/recommendedDaos"
-      ? true
-      : false;
-  }
 
   function moveToHomePage() {
     router.push("/");
@@ -33,19 +27,19 @@ const HeaderComponent = ({ showMenu, toggleMenu }: IProps) => {
         p={{ base: "24px 20px 20px 20px", md: "24px 70px 20px" }}
         boxSizing={"border-box"}
         borderBottom={"1px solid #CFCFCF"}
-        background={isDark() ? "black" : "white"}
+        background={isDark ? "black" : "white"}
       >
         <Box display={"flex"} onClick={moveToHomePage} className={"pointer"}>
           <Image
             alt={"open-dao-logo"}
-            src={isDark() ? "app-logo-green.svg" : "opendao.svg"}
+            src={isDark ? "app-logo-green.svg" : "opendao.svg"}
           />
           <Text
             ml={"20px"}
             fontSize={"40px"}
             fontWeight={"700"}
             fontStyle={"bold"}
-            color={isDark() ? "white" : "black"}
+            color={isDark ? "white" : "black"}
           >
             OpenDAO
           </Text>
@@ -57,8 +51,8 @@ const HeaderComponent = ({ showMenu, toggleMenu }: IProps) => {
               key={item?.id}
               name={item?.name}
               link={item?.link}
-              color={isDark() ? "white" : "black"}
-              isDark={isDark()}
+              color={isDark ? "white" : "black"}
+              isDark={isDark}
             />
           ))}
         </Box>
@@ -72,13 +66,13 @@ const HeaderComponent = ({ showMenu, toggleMenu }: IProps) => {
 
         <Box
           display={{ base: "block", xl: "none" }}
-          background={!isDark() ? "white" : "black"}
+          background={!isDark ? "white" : "black"}
           border={"0.1px solid grey"}
           p={"14px"}
           borderRadius={"8px"}
           onClick={toggleMenu}
         >
-          <RiMenuLine color={isDark() ? "white" : "black"} />
+          <RiMenuLine color={isDark ? "white" : "black"} />
         </Box>
       </Box>
     </Box>

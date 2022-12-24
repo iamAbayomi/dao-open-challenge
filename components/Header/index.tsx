@@ -8,9 +8,12 @@ import { IoMdClose } from "react-icons/io";
 import HeaderComponent from "./HeaderComponent";
 import ResponsiveMenuHeaderComponent from "./ResponsiveMenuHeaderComponent";
 
-const Header = () => {
+interface IProps {
+  isDark: boolean;
+}
+
+const Header = ({ isDark }: IProps) => {
   const router = useRouter();
-  const isDark = useIsDarkMode();
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
   function toggleMenu() {
@@ -23,7 +26,11 @@ const Header = () => {
 
   return (
     <Box>
-      <HeaderComponent showMenu={showMenu} toggleMenu={toggleMenu} />
+      <HeaderComponent
+        isDark={isDark}
+        showMenu={showMenu}
+        toggleMenu={toggleMenu}
+      />
 
       {showMenu && (
         <Box
@@ -45,7 +52,7 @@ const Header = () => {
                   key={item?.id}
                   name={item?.name}
                   link={item?.link}
-                  color={isDark ? "white" : "black"}
+                  color={"black"}
                   isDark={isDark}
                 />
               ))}

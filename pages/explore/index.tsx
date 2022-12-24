@@ -1,6 +1,6 @@
 import { Box, Text } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
-import HomeLayout from "../../components/Layout/HomeLayout";
+import HomeLayout from "../../layout/HomeLayout";
 
 const DiscoverSection = dynamic(
   () => import("../../components/DiscoverSection")

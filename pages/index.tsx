@@ -13,7 +13,7 @@ export default function Home() {
     <Box>
       <Box pb={"0px"} margin={"auto"} maxWidth={"2000px"}>
         <Banner />
-        <Header />
+        <Header isDark={false} />
         <ValuePropositon />
         <Box margin={{ base: "200px 30px 0px", xl: "200px 0px 20px 50px" }}>
           <DiscoverSection />

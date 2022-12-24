@@ -5,7 +5,7 @@ import { aboutusData } from "../../utils/dummydata";
 const Index = () => {
   return (
     <Box background={"black"} color={"white"} pb={"200px"}>
-      <Header />
+      <Header isDark />
       <Box mt={"100px"}>
         {aboutusData?.map((item) => (
           <Box key={item?.id} m={"191px 40px 0px 90px"}>

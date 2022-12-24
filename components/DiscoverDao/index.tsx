@@ -97,7 +97,7 @@ const DiscoverDao = () => {
 
       <Box
         mt={"49px"}
-        display={"none"}
+        display={{ base: "none", lg: "flex" }}
         width={"100%"}
         gap={"40px"}
         alignItems={"center"}
