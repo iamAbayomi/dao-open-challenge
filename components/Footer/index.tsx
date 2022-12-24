@@ -5,7 +5,10 @@ import HeaderText from "../HeaderText";
 
 const Footer = () => {
   return (
-    <Box pos={"relative"} p={"100px 40px 60px 40px"}>
+    <Box
+      pos={"relative"}
+      p={{ base: "100px 20px 60px 20px", lg: "100px 40px 60px 40px" }}
+    >
       <Box
         display={"none"}
         position={"absolute"}
@@ -75,7 +78,7 @@ const Footer = () => {
       </Box>
       <Box mt={"43px"} borderBottom={"0.5px solid #A1A1A1"} />
       <Box mt={"40px"} display={"flex"} justifyContent={"space-between"}>
-        <Text>Made with ❤️ by Temidayo & Queennette</Text>
+        <Text>Made with ❤️ by Temidayo, Queennette & Abayomi</Text>
         <Box display={"flex"} flexDir={{ base: "column", xl: "row" }}>
           {headerData?.map((item: IHeaderLink) => (
             <HeaderText key={item?.id} name={item?.name} link={item?.link} />
