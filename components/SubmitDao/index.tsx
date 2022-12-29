@@ -6,7 +6,11 @@ import DescribeDAO from "./DescribeDAO";
 import ProfileHandles from "./ProfileHandles";
 import UploadDetails from "./UploadDetails";
 
-const SubmitDao = () => {
+interface IProps {
+  onClose: () => void;
+}
+
+const SubmitDao = ({ onClose }: IProps) => {
   return (
     <Box
       position={"fixed"}
@@ -30,7 +34,7 @@ const SubmitDao = () => {
           <Text fontSize={"38px"} fontWeight={"700"}>
             Submit a DAO
           </Text>
-          <MdClose />
+          <MdClose onClick={onClose} />
         </Box>
 
         <Box display={"flex"} gap={"5"} mt={"20px"}>

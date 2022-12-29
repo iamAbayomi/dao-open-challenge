@@ -1,5 +1,6 @@
 import { Box, Button, Text, Image } from "@chakra-ui/react";
 import { useRouter } from "next/router";
+import { useState } from "react";
 import { ICategory } from "../../types";
 import { category } from "../../utils";
 import { useViewPage } from "../../utils/helpers";
@@ -110,7 +111,6 @@ const ValuePropositon = () => {
           transform={"rotate(25deg)"}
         />
       </Box>
-      <SubmitDao />
     </Box>
   );
 };
