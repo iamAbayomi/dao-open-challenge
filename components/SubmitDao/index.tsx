@@ -1,6 +1,10 @@
 import { Box, Button, Input, Select, Text, Image } from "@chakra-ui/react";
 import { MdArrowForward, MdClose } from "react-icons/md";
 import ContactDetails from "./ContactDetails";
+import DaoName from "./DaoName";
+import DescribeDAO from "./DescribeDAO";
+import ProfileHandles from "./ProfileHandles";
+import UploadDetails from "./UploadDetails";
 
 const SubmitDao = () => {
   return (
@@ -11,14 +15,16 @@ const SubmitDao = () => {
       background={"rgba(27, 31, 36, 0.5)"}
       height={"100%"}
       width={"100%"}
+      zIndex={"2000"}
     >
       <Box
         background={"white"}
         width={"100%"}
         maxWidth={"900px"}
-        margin={"15vh auto"}
+        margin={"9vh auto"}
         p={"50px 80px 40px 60px"}
         borderRadius={"10px"}
+        overflow={"auto"}
       >
         <Box display={"flex"} justifyContent={"space-between"}>
           <Text fontSize={"38px"} fontWeight={"700"}>
@@ -50,7 +56,12 @@ const SubmitDao = () => {
           />
         </Box>
         <Box>
-          <ContactDetails />
+          {/*
+          <DescribeDAO /> */}
+          {/* <ProfileHandles /> */}
+          {/* <DaoName /> */}
+          {/* <ContactDetails /> */}
+          <UploadDetails />
         </Box>
       </Box>
     </Box>
