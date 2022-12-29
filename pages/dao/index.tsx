@@ -4,13 +4,13 @@ import Badge from "../../components/Badge";
 import AllProposalSection from "../../components/Daos/AllProposals/AllProposalSection";
 import Categories from "../../components/Daos/Categories";
 import NewsLetter from "../../components/Daos/NewsLetter";
-import HomeLayout from "../../components/Layout/HomeLayout";
+import HomeLayout from "../../layout/HomeLayout";
 import { ICategories } from "../../types";
 import { categoriesData, detailedDao } from "../../utils/dummydata";
 
 const Index = () => {
   return (
-    <HomeLayout>
+    <HomeLayout isDark={false}>
       <Box>
         <Box display={"flex"} justifyContent={"space-between"} m={"100px 50px"}>
           <Box>

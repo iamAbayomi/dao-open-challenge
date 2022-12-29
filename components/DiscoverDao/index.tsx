@@ -1,14 +1,22 @@
 import { Box, Text, Image, Button } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
+import { useState } from "react";
 import { badgeData } from "../../utils/dummydata";
 import Badge from "../Badge";
+import SubmitDao from "../SubmitDao";
 
 const Span = styled.span`
   color: black;
 `;
 const DiscoverDao = () => {
+  const [isOpen, onClose] = useState<boolean>(false);
   const router = useRouter();
+
+  function toggleSubmitDao() {
+    onClose(!isOpen);
+  }
+
   function isExplorePage() {
     return router.pathname.includes("/explore") ? true : false;
   }
@@ -42,7 +50,11 @@ const DiscoverDao = () => {
               accuracy. We could also be in touch to ask for more details.
             </Text>
           </Box>
-          <Button p={"10px 40px"} background={"#C2EC5B"}>
+          <Button
+            onClick={toggleSubmitDao}
+            p={"10px 40px"}
+            background={"#C2EC5B"}
+          >
             <Text fontWeight={"400"} fontSize={"13px"}>
               Submit a DAO
             </Text>
@@ -50,6 +62,7 @@ const DiscoverDao = () => {
         </Box>
       )}
 
+      {isOpen && <SubmitDao onClose={toggleSubmitDao} />}
       <Box margin={"32px 20px 0px 20px"} display={"flex"} alignItems={"center"}>
         <Box
           height={"70px"}
@@ -97,7 +110,7 @@ const DiscoverDao = () => {
 
       <Box
         mt={"49px"}
-        display={"none"}
+        display={{ base: "none", lg: "flex" }}
         width={"100%"}
         gap={"40px"}
         alignItems={"center"}

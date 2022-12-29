@@ -1,5 +1,6 @@
-import { Box, Text, Image } from "@chakra-ui/react";
+import { Box, Text, Image, Link } from "@chakra-ui/react";
 import styled from "@emotion/styled";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 const Banner = () => {
@@ -7,6 +8,7 @@ const Banner = () => {
   function toggleBanner() {
     setShowBanner(!showBanner);
   }
+
   const Span = styled.span`
     color: #c2ec5b; ;
   `;
@@ -38,7 +40,9 @@ const Banner = () => {
             >
               <Text color={"white"} textAlign={"center"} fontSize={"1rem"}>
                 📹 Watch our Full Video Course on “Web3” & DAOs,{" "}
-                <Span> Click Here</Span>
+                <Link href="/video">
+                  <Span> Click Here</Span>
+                </Link>
               </Text>
               <Image
                 display={{ base: "none", sm: "block" }}

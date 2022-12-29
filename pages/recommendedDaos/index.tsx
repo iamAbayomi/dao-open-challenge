@@ -2,7 +2,7 @@ import { Box, Button, Text, Image } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { MdArrowForward } from "react-icons/md";
 import Badge from "../../components/Badge";
-import HomeLayout from "../../components/Layout/HomeLayout";
+import HomeLayout from "../../layout/HomeLayout";
 import RecommendedDaos from "../../components/RecommendedDao";
 import { IDaoContainer } from "../../types";
 import { hotDaoData, newDaoData } from "../../utils/dummydata";
@@ -14,7 +14,7 @@ const Index = () => {
   const recommendDao = hotDaoData.concat(newDaoData);
 
   return (
-    <HomeLayout>
+    <HomeLayout isDark>
       <Box>
         <Box width={"100%"} background={"black"}>
           <Box
