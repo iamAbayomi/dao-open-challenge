@@ -8,7 +8,7 @@ import { alphabetData, glossaryData } from "../../utils/dummydata";
 const Index = () => {
   const [state, setState] = useState<string>("white");
   return (
-    <HomeLayout>
+    <HomeLayout isDark={false}>
       <Box p={"50px 60px"} background={"#F6F6F6"}>
         <Box fontWeight={"700"} fontSize={"38px"} display={"flex"} gap={"5px"}>
           <Text color={"#B0B0B0"}>Learn </Text>
