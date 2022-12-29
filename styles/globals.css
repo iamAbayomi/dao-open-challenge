@@ -8,6 +8,58 @@
   src: url("../public/fonts/Degular/Degular.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Degular";
+  src: url("../public/fonts/Degular/DegularDemo-BlackItalic.woff") format("woff");
+  font-style: italic ;
+}
+
+@font-face {
+  font-family: "Degular";
+  src: url("../public/fonts/Degular/DegularDemo-BlackItalic.woff") format("woff");
+  font-style: italic ;
+}
+
+@font-face {
+  font-family: "Degular";
+  src: url("../public/fonts/Degular/DegularDemo-Bold.woff") format("woff");
+  font-weight: 700 ;
+}
+
+
+@font-face {
+  font-family: "Degular";
+  src: url("../public/fonts/Degular/DegularDemo-Italic.woff") format("woff");
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: "Degular";
+  src: url("../public/fonts/Degular/DegularDemo-Light.woff") format("woff");
+  font-weight: 400 ;
+}
+
+
+@font-face {
+  font-family: "Degular";
+  src: url("../public/fonts/Degular/DegularDemo-Medium.woff") format("woff");
+  font-weight: 600 ;
+}
+
+@font-face {
+  font-family: "Degular";
+  src: url("../public/fonts/Degular/DegularDemo-Regular.woff") format("woff");
+  font-weight: 500 ;
+}
+
+
+@font-face {
+  font-family: "Degular";
+  src: url("../public/fonts/Degular/DegularDemo-Semibold.woff") format("woff");
+  font-weight: 600 ;
+}
+
 html,
 body {
   padding: 0;

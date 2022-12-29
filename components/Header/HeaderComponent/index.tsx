@@ -57,7 +57,11 @@ const HeaderComponent = ({ isDark, toggleMenu }: IProps) => {
           ))}
         </Box>
 
-        <Button display={{ base: "none", xl: "flex" }} background={"#C2EC5B"}>
+        <Button
+          display={{ base: "none", xl: "flex" }}
+          background={"#C2EC5B"}
+          _hover={{ background: "#C2EC5B" }}
+        >
           <Image alt={"link"} src={"./link.svg"} />
           <Text color={"black"} fontWeight={"400"}>
             Connect Wallet

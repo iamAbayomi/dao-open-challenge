@@ -16,7 +16,7 @@ const HeaderText = ({ name, link = "", color, isDark }: IProps) => {
           textAlign={"center"}
           color={color}
           fontWeight={"400"}
-          fontSize={"1rem"}
+          fontSize={"17px"}
         >
           {name}
         </Text>
