@@ -9,13 +9,7 @@ const Footer = () => {
       pos={"relative"}
       p={{ base: "100px 20px 60px 20px", lg: "100px 40px 60px 40px" }}
     >
-      <Box
-        display={"none"}
-        position={"absolute"}
-        top={"0px"}
-        right={"55%"}
-        className={"hide-element"}
-      >
+      <Box position={"absolute"} top={"0px"} right={"55%"}>
         <Box
           position={"absolute"}
           width={"200px"}

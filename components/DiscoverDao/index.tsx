@@ -79,7 +79,7 @@ const DiscoverDao = () => {
           </Box>
           <Box
             pos={"absolute"}
-            top={"105px"}
+            bottom={"0px"}
             maxW={"120px"}
             overflow={"hidden"}
           >

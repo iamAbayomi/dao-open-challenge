@@ -4,7 +4,7 @@ import GettingStartedComponent from "../GettingStartedComponent";
 
 const GettingStartedSection = () => {
   return (
-    <Box>
+    <Box position={"relative"}>
       <Box
         display={"flex"}
         margin={"200px auto 78px"}
@@ -33,27 +33,37 @@ const GettingStartedSection = () => {
         <Text fontWeight={"700"} fontSize={"40px"} textAlign={"center"}>
           Getting Started
         </Text>
-        <Box position={"relative"} className={"hide-element"}>
-          <Box
-            position={"absolute"}
-            right={"0px"}
-            height={"200px"}
-            width={"100px"}
-            borderRadius={"100px"}
-            background={"rgba(255, 122, 0, 0.5)"}
-            filter={"blur(30px)"}
-            transform={"rotate(25deg)"}
-          />
-          <Box
-            position={"absolute"}
-            top={"100px"}
-            right={"0px"}
-            width={"170px"}
-            height={"200px"}
-            background={"rgba(194, 236, 91, 0.5)"}
-            filter={"blur(30px)"}
-            transform={"rotate(25deg)"}
-          />
+        <Box display={{ base: "none", sm: "block" }} position={"relative"}>
+          <Box>
+            <Box
+              position={"absolute"}
+              right={"0px"}
+              height={"200px"}
+              width={"100px"}
+              maxH={"200px"}
+              overflow={"hidden"}
+              borderRadius={"100px"}
+              background={"rgba(255, 122, 0, 0.5)"}
+              filter={"blur(30px)"}
+              transform={"rotate(25deg)"}
+              border={"1px solid black"}
+            />
+          </Box>
+
+          <Box maxWidth={"100px"}>
+            <Box
+              position={"absolute"}
+              top={"100px"}
+              right={"0px"}
+              width={"170px"}
+              height={"200px"}
+              maxH={"200px"}
+              overflow={"hidden"}
+              background={"rgba(194, 236, 91, 0.5)"}
+              filter={"blur(30px)"}
+              transform={"rotate(25deg)"}
+            />
+          </Box>
         </Box>
 
         <Box margin={"auto"} maxW={"1000px"}>

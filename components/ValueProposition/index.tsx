@@ -90,6 +90,7 @@ const ValuePropositon = () => {
         top={"300px"}
         right={{ base: "50%", sm: "150px" }}
         zIndex={"2000"}
+        display={{ base: "none", sm: "block" }}
       >
         <Box
           position={"absolute"}

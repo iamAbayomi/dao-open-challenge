@@ -10,7 +10,7 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <Box>
+    <Box overflowX={"hidden"}>
       <Box pb={"0px"} margin={"auto"} maxWidth={"2000px"}>
         <Banner />
         <Header isDark={false} />
