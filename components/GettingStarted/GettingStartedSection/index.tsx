@@ -74,6 +74,7 @@ const GettingStartedSection = () => {
       </Box>
 
       <Box
+        pos={"relative"}
         margin={"275px auto 100px auto"}
         maxWidth={"1100px"}
         background={"#C2EC5B"}
@@ -88,12 +89,17 @@ const GettingStartedSection = () => {
           justifyContent={"space-between"}
           flexDir={{ base: "column", xl: "row" }}
           gap={"60px"}
+          zIndex={"200"}
         >
           <Text fontSize={"34px"} fontWeight={"740"}>
             Join our community.
             <br /> Change the world.
           </Text>
-          <Box display={"flex"}>
+          <Box
+            display={"flex"}
+            flexDir={{ base: "column", xl: "row" }}
+            gap={"18px"}
+          >
             <Input
               background={"white"}
               maxW={"340px"}
@@ -101,8 +107,8 @@ const GettingStartedSection = () => {
               _placeholder={{ fontSize: "12px", color: "#CCCCCC" }}
             />
             <Button
-              w={"max-content"}
-              ml={"18px"}
+              w={"100%"}
+              maxWidth={{ base: "340px", xl: "max-content" }}
               p={"20px 30px 20px 30px"}
               background={"black"}
               color={"white"}
@@ -110,6 +116,28 @@ const GettingStartedSection = () => {
               <Text fontSize={"12px"}>Join Newsletter</Text>
             </Button>
           </Box>
+        </Box>
+
+        <Box
+          opacity={"20%"}
+          position={"absolute"}
+          top={"0px"}
+          left={{ sm: "80%", lg: "38%" }}
+          max-width={"94px"}
+        >
+          <Image width={"94px"} alt="first-vector" src="./gs-f-vector.svg" />
+        </Box>
+        <Box
+          opacity={"20%"}
+          position={"absolute"}
+          top={"20px"}
+          left={{ base: "80%", lg: "48%" }}
+        >
+          <Image
+            max-width={"94px"}
+            alt="second-vector"
+            src="./gs-s-vector.svg"
+          />
         </Box>
       </Box>
     </Box>
