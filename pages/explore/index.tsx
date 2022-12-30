@@ -10,7 +10,9 @@ const Index = () => {
   return (
     <HomeLayout isDark={false}>
       <Box margin={"100px 0px 20px 50px"}>
-        <DiscoverSection />
+        <Box p={"0px 30px 0px 50px"}>
+          <DiscoverSection />
+        </Box>
       </Box>
     </HomeLayout>
   );
