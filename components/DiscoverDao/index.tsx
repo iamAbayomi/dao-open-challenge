@@ -25,40 +25,66 @@ const DiscoverDao = () => {
       <Text color={"#FF7A00"} fontWeight={"700"} fontSize={"56px"}>
         Discover <Span> our</Span> DAOs
       </Text>
-      <Text fontWeight={"300"}>
+      <Text mt={"10px"} fontWeight={"300"}>
         We have over 1,000 Active DAOs for you to Explore
       </Text>
       {isExplorePage() && (
         <Box
-          display={"flex"}
-          alignItems={"center"}
-          justifyContent={"space-between"}
-          flexWrap={"wrap"}
+          m={"63px 50px 80px 0px"}
           background={"#FF7A00"}
           borderRadius={"10px"}
-          m={"63px 50px 80px 0px"}
-          p={"30px 60px 40px"}
-          gap={"40px"}
+          pos={"relative"}
         >
-          <Box color={"white"}>
-            <Text fontWeight={"700"} fontSize={"30px"}>
-              Create your DAO with us
-            </Text>
-            <Text mt={"20px"} maxWidth={"600px"}>
-              We want your DAO to be a part of the largest DAO database we can
-              develop. After submission, We&apos;ll check your data for
-              accuracy. We could also be in touch to ask for more details.
-            </Text>
-          </Box>
-          <Button
-            onClick={toggleSubmitDao}
-            p={"10px 40px"}
-            background={"#C2EC5B"}
+          <Box
+            display={"flex"}
+            alignItems={"center"}
+            justifyContent={"space-between"}
+            flexWrap={"wrap"}
+            p={"30px 60px 40px"}
+            gap={"40px"}
           >
-            <Text fontWeight={"400"} fontSize={"13px"}>
-              Submit a DAO
-            </Text>
-          </Button>
+            <Box color={"white"}>
+              <Text fontWeight={"700"} fontSize={"42px"}>
+                Create your DAO with us
+              </Text>
+              <Text
+                mt={"21px"}
+                fontSize={"19px"}
+                fontWeight={"500"}
+                maxWidth={"600px"}
+              >
+                We want your DAO to be a part of the largest DAO database we can
+                develop. After submission, We&apos;ll check your data for
+                accuracy. We could also be in touch to ask for more details.
+              </Text>
+            </Box>
+            <Button
+              onClick={toggleSubmitDao}
+              p={"29px 70px 26px"}
+              background={"#C2EC5B"}
+            >
+              <Text fontWeight={"400"} fontSize={"16px"}>
+                Submit a DAO
+              </Text>
+            </Button>
+          </Box>
+          <Box
+            pos={"absolute"}
+            top={"0px"}
+            right={"0px"}
+            maxW={"130px"}
+            overflow={"hidden"}
+          >
+            <Image alt="vector" src="./explore-second.svg" />
+          </Box>
+          <Box
+            pos={"absolute"}
+            top={"105px"}
+            maxW={"120px"}
+            overflow={"hidden"}
+          >
+            <Image alt="vector" src="./explore-first.svg" />
+          </Box>
         </Box>
       )}
 
