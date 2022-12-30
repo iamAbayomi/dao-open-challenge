@@ -15,8 +15,9 @@ const DiscoverSection = () => {
             display={"flex"}
             justifyContent={"space-between"}
             m={"130px 0px 0px 0px"}
+            alignItems={"center"}
           >
-            <Text fontSize={"20px"} fontWeight={"700"}>
+            <Text fontSize={"28px"} fontWeight={"700"}>
               🔥 Hot DAOs
             </Text>
             <Box display={"flex"} mr={"50px"}>
@@ -57,9 +58,10 @@ const DiscoverSection = () => {
           <Box
             display={"flex"}
             justifyContent={"space-between"}
+            alignItems={"center"}
             m={"130px 0px 0px 0px"}
           >
-            <Text fontSize={"20px"} fontWeight={"700"}>
+            <Text fontSize={"28px"} fontWeight={"700"}>
               🆕 New DAOs
             </Text>
             <Box display={"flex"} mr={"50px"}>
