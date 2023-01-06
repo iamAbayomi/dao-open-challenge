@@ -25,14 +25,14 @@ const DiscoverSection = () => {
                 background={"#F2F2F2"}
                 maxWidth={"max-content"}
                 borderRadius={"5px"}
-                p={"7px 2px 0px 2px"}
+                p={"4px 7px 4px 7px"}
               >
                 <IoMdArrowBack />
               </Box>
               <Box
                 background={"#F2F2F2"}
                 ml={"20px"}
-                p={"7px 2px 0px 2px"}
+                p={"4px 7px 4px 7px"}
                 maxWidth={"max-content"}
                 borderRadius={"5px"}
               >
@@ -69,14 +69,14 @@ const DiscoverSection = () => {
                 background={"#F2F2F2"}
                 maxWidth={"max-content"}
                 borderRadius={"5px"}
-                p={"7px 2px 0px 2px"}
+                p={"4px 7px 4px 7px"}
               >
                 <IoMdArrowBack />
               </Box>
               <Box
                 background={"#F2F2F2"}
                 ml={"20px"}
-                p={"7px 2px 0px 2px"}
+                p={"4px 7px 4px 7px"}
                 maxWidth={"max-content"}
                 borderRadius={"5px"}
               >
