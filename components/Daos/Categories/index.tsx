@@ -8,10 +8,13 @@ interface props {
 const Categories = ({ item }: props) => {
   return (
     <Box
-      mb={"15px"}
+      height={"150px"}
+      width={"100%"}
+      max-width={"150px"}
       p={"5px 10px"}
       background={item?.background}
       borderRadius={"10px"}
+      overflow={"auto"}
     >
       <Text fontWeight={"400"} fontSize={"18px"}>
         {item?.title}
