@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "name": "T-Shirt",
+      "description": "This is a description of a T-Shirt",
+      "price": "$15.99",
+      "image": "https://via.placeholder.com/150",
+      "color": "Black",
+      "size": "Medium",
+      "category": "Tops"
+    },
+    {
+      "id": 2,
+      "name": "Jeans",
+      "description": "This is a description of a Jeans",
+      "price": "$40.99",
+      "image": "https://via.placeholder.com/150",
+      "color": "Blue",
+      "size": "32x32",
+      "category": "Bottoms"
+    },
+    {
+      "id": 3,
+      "name": "Dress",
+      "description": "This is a description of a Dress",
+      "price": "$50.99",
+      "image": "https://via.placeholder.com/150",
+      "color": "Red",
+      "size": "Small",
+      "category": "Dresses"
+    },
+    {
+      "id": 4,
+      "name": "Jacket",
+      "description": "This is a description of a Jacket",
+      "price": "$80.99",
+      "image": "https://via.placeholder.com/150",
+      "color": "Green",
+      "size": "Large",
+      "category": "Outerwear"
+    },
+    {
+      "id": 5,
+      "name": "Sneakers",
+      "description": "This is a description of a Sneakers",
+      "price": "$80.99",
+      "image": "https://via.placeholder.com/150",
+      "color": "Green",
+      "size": "Large",
+      "category": "Outerwear"
+    }
+]
+  
