@@ -9,6 +9,9 @@ import SubmitDao from "../SubmitDao";
 const Span = styled.span`
   color: black;
 `;
+
+const FirstSpan = styled.span``;
+
 const DiscoverDao = () => {
   const [isOpen, onClose] = useState<boolean>(false);
   const router = useRouter();
@@ -23,7 +26,8 @@ const DiscoverDao = () => {
   return (
     <Box>
       <Text color={"#FF7A00"} fontWeight={"700"} fontSize={"56px"}>
-        Discover <Span> our</Span> DAOs
+        <FirstSpan className="first-text"></FirstSpan>{" "}
+        <Span className="second-text"> our</Span> DAOs
       </Text>
       <Text mt={"10px"} fontWeight={"300"}>
         We have over 1,000 Active DAOs for you to Explore
@@ -79,7 +83,7 @@ const DiscoverDao = () => {
           </Box>
           <Box
             pos={"absolute"}
-            top={"105px"}
+            bottom={"0px"}
             maxW={"120px"}
             overflow={"hidden"}
           >

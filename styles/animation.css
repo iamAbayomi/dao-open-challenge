@@ -1,0 +1,60 @@
+
+/* 
+    Discover
+    Explore 
+    Invest In
+    Participate In
+*/
+
+
+/* Define the keyframes for the bouncing animation */
+@keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply the bouncing animation to the element */
+  .second-text{
+    animation: bounce 1s infinite;
+    animation-name: bounce;
+    margin-top: 10px;
+  }
+
+@keyframes animateText {
+  0% {
+    color: #FF7A00 ;
+    content: "Discover";
+}
+  25% {
+    color: #C2EC5B ;
+    content: "Explore";
+}
+  50% { 
+    color: black;
+    content: "Invest In";
+}
+  100% { 
+    color: #4982F7 ;
+    content: "Participate In";
+   
+}
+
+}
+
+
+.first-text::after {
+    /* color: #FF7A00; */
+    content: "Discover";
+    animation-name: animateText;
+    animation-duration: 8s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}

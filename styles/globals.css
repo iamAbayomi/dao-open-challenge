@@ -93,3 +93,6 @@ p {
   font-family: 'Maglony';
 }
 
+.clear{
+  clear: both;
+}

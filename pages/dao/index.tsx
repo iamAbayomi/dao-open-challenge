@@ -95,7 +95,12 @@ const Index = () => {
           </Button>
         </Box>
         <Box borderBottom={"0.1px solid #C6C6C6"} />
-        <Box m={"20px 50px 30px"} display={"flex"} gap={"80px"}>
+        <Box
+          m={"20px 50px 30px"}
+          display={"flex"}
+          gap={"80px"}
+          flexDir={{ base: "column", md: "row" }}
+        >
           <Box>
             <Box
               display={"flex"}
@@ -107,7 +112,12 @@ const Index = () => {
               <Image alt="up-down" src="./up-down-arrow.svg" />
             </Box>
 
-            <Box>
+            <Box
+              display={"flex"}
+              gap={"15"}
+              flexDir={{ base: "row", md: "column" }}
+              overflow={"auto"}
+            >
               {categoriesData?.map((item: ICategories) => (
                 <Categories key={item?.id} item={item} />
               ))}

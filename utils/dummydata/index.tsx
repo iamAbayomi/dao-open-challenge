@@ -521,6 +521,29 @@ export const glossaryData: IGlossaryIndex[] = [
   }
 ];
 
+export const personalGoalData: string[] = [
+  "Networking",
+  "Financial Investment",
+  "Meme & Fun",
+  "Knowledge",
+  "Social Impact",
+  "I Don’t Know"
+];
+
+export const interestData: string[] = [
+  "NFTs",
+  "Play 2 Earn",
+  "Trading Crypto",
+  "DeFi"
+];
+
+export const memberData: string[] = [
+  "What is a DAO?",
+  "Yes, I am",
+  "No, I am not",
+  "Not Sure"
+];
+
 const same: IGlossaryData[] = [
   {
     title: "",
@@ -533,3 +556,22 @@ const same: IGlossaryData[] = [
     description: ``
   }
 ];
+
+
+
+// const Title = () => {
+//   return (
+//     <>
+//       {step == 1 ? (
+//         <Text m={"51px 0px 120px"} fontSize={"38px"} fontWeight={"700"}>
+//           What are your personal goal <br /> with
+//           <Span>DAOs?</Span>
+//         </Text>
+//       ) : step == 2 ? (
+//         "What are you most interested in?"
+//       ) : (
+//         "Are you currently a member of any DAOs?"
+//       )}
+//     </>
+//   );
+// };

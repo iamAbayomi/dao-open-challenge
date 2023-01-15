@@ -5,10 +5,16 @@ import { ICategory } from "../../types";
 import { category } from "../../utils";
 import { useViewPage } from "../../utils/helpers";
 import Category from "../Category";
+import QuickSurvey from "../QuickSurvey";
 import SubmitDao from "../SubmitDao";
 
 const ValuePropositon = () => {
+  const [showQuickSurvey, setShowQuickSurvey] = useState<boolean>(false);
   const router = useRouter();
+
+  function toggleShowQuickSurvey() {
+    setShowQuickSurvey(!showQuickSurvey);
+  }
 
   function viewPage(path: string) {
     router.push(path);
@@ -64,6 +70,7 @@ const ValuePropositon = () => {
             background={"white"}
             p={"25px 30px"}
             _hover={{ background: "white" }}
+            onClick={toggleShowQuickSurvey}
           >
             <Image alt="survey" src="./take-survey.svg" />
             <Text ml={"10px"} fontWeight={"400"}>
@@ -71,6 +78,8 @@ const ValuePropositon = () => {
             </Text>
           </Button>
         </Box>
+
+        {showQuickSurvey && <QuickSurvey closeModal={toggleShowQuickSurvey} />}
 
         <Box
           display={"flex"}
@@ -90,6 +99,7 @@ const ValuePropositon = () => {
         top={"300px"}
         right={{ base: "50%", sm: "150px" }}
         zIndex={"2000"}
+        display={{ base: "none", sm: "block" }}
       >
         <Box
           position={"absolute"}
