@@ -9,7 +9,12 @@ import QuickSurvey from "../QuickSurvey";
 import SubmitDao from "../SubmitDao";
 
 const ValuePropositon = () => {
+  const [showQuickSurvey, setShowQuickSurvey] = useState<boolean>(false);
   const router = useRouter();
+
+  function toggleShowQuickSurvey() {
+    setShowQuickSurvey(!showQuickSurvey);
+  }
 
   function viewPage(path: string) {
     router.push(path);
@@ -65,6 +70,7 @@ const ValuePropositon = () => {
             background={"white"}
             p={"25px 30px"}
             _hover={{ background: "white" }}
+            onClick={toggleShowQuickSurvey}
           >
             <Image alt="survey" src="./take-survey.svg" />
             <Text ml={"10px"} fontWeight={"400"}>
@@ -73,7 +79,7 @@ const ValuePropositon = () => {
           </Button>
         </Box>
 
-        <QuickSurvey />
+        {showQuickSurvey && <QuickSurvey closeModal={toggleShowQuickSurvey} />}
 
         <Box
           display={"flex"}
