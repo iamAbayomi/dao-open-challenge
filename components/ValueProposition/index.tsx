@@ -5,6 +5,7 @@ import { ICategory } from "../../types";
 import { category } from "../../utils";
 import { useViewPage } from "../../utils/helpers";
 import Category from "../Category";
+import QuickSurvey from "../QuickSurvey";
 import SubmitDao from "../SubmitDao";
 
 const ValuePropositon = () => {
@@ -71,6 +72,8 @@ const ValuePropositon = () => {
             </Text>
           </Button>
         </Box>
+
+        <QuickSurvey />
 
         <Box
           display={"flex"}
