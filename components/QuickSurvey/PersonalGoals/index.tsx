@@ -23,11 +23,21 @@ const Span = styled.span`
   color: #ff7a00;
 `;
 
-const PersonalGoals = () => {
+interface Props {
+  closeModal: () => void;
+}
+
+const PersonalGoals = ({ closeModal }: Props) => {
   const { getCheckboxProps } = useCheckboxGroup({
     defaultValue: ["0"]
   });
   const [step, setStep] = useState<number>(1);
+
+  function resetState() {
+    setStep(1);
+    closeModal();
+    console.log("close Modal");
+  }
 
   const Title = () => {
     return (
@@ -46,19 +56,19 @@ const PersonalGoals = () => {
       </Text>
     );
   };
-
-  const data: string[] =
-    step === 1 ? personalGoalData : step === 2 ? interestData : memberData;
-
   return (
-    <Box p={"23px 60px 27px 53px"}>
+    <Box p={{ base: "23px 10px 0px 10px", sm: "23px 60px 27px 53px" }}>
       <Text>Step {step}/3</Text>
-      <CloseButton float={"right"} background={"rgba(217, 217, 217, 0.5)"} />
+      <CloseButton
+        onClick={resetState}
+        float={"right"}
+        background={"rgba(217, 217, 217, 0.5)"}
+      />
       <Box className="clear">
         <Title />
         <Box
           display={"grid"}
-          gridTemplateColumns={"auto auto auto"}
+          gridTemplateColumns={"repeat(auto-fit, minmax(200px, 1fr))"}
           gap={"50px"}
         >
           {step === 1 ? (
@@ -75,20 +85,26 @@ const PersonalGoals = () => {
             <MemberDAOs />
           )}
         </Box>
-        <Box m={"91px 0px 0px"} display={"flex"} alignItems={"center"}>
+        <Box
+          m={"91px 0px 0px"}
+          display={"flex"}
+          gap={"41px"}
+          alignItems={"center"}
+          flexDir={{ base: "column", sm: "row" }}
+        >
           <Button
             background={"#C2EC5B"}
             _focus={{ background: "#C2EC5B" }}
             _hover={{ background: "#C2EC5B" }}
             p={"26px 32px 26px 32px"}
-            onClick={step !== 3 ? () => setStep(step + 1) : () => setStep(1)}
+            onClick={step !== 3 ? () => setStep(step + 1) : resetState}
           >
             <Text fontSize={"14px"} fontWeight={"400"} mr={"10px"}>
               {step !== 3 ? "Next" : "Finish"}
             </Text>
             <IoMdArrowForward size={"16px"} fontWeight={"400"} />
           </Button>
-          <Text fontSize={"14px"} ml={"43px"}>
+          <Text fontSize={"14px"} className={"pointer"} onClick={resetState}>
             Ask Me Later
           </Text>
         </Box>
