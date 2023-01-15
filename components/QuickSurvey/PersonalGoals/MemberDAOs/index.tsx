@@ -8,7 +8,7 @@ const MemberDAOs = () => {
     <Box
       {...getRootProps()}
       display={"grid"}
-      gridTemplateColumns={"auto auto auto"}
+      gridTemplateColumns={"repeat(auto-fit, minmax(200px, 1fr))"}
       gap={"50px"}
     >
       {memberData?.map((item: string, index: number) => (
