@@ -64,7 +64,12 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Maglony, Degular}
+  font-family: Maglony, Degular;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 a {
   color: inherit;

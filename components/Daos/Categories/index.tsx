@@ -9,7 +9,6 @@ const Categories = ({ item }: props) => {
   return (
     <Box
       width={"100%"}
-      maxW={"400px"}
       p={"5px 10px"}
       background={item?.background}
       borderRadius={"10px"}

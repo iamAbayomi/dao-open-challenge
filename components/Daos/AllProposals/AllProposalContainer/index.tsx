@@ -8,12 +8,15 @@ const AllProposalContainer = () => {
       p={"20px 30px"}
       border={"1px solid #DADADA"}
       borderRadius={"15px"}
+      boxSizing={"border-box"}
       mb={"30px"}
     >
       <Box
         display={"flex"}
+        gap={"20px"}
         justifyContent={"space-between"}
         alignItems={"baseline"}
+        flexDir={{ base: "column", lg: "row" }}
       >
         <Box>
           <Text fontWeight={"600"} fontSize={"18px"}>
