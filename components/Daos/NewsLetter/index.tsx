@@ -17,9 +17,9 @@ const NewsLetter = () => {
           <Text fontWeight={"300"} mt={"21px"} maxW={"300px"} fontSize={"14px"}>
             The DAO Weekly Newsletter includes updates regarding proposals
           </Text>
-          <Box display={"flex"} mt={"41px"}>
+          <Box mt={"41px"} display={"flex"} gap={"15px"}>
             <Input background={"white"} placeholder="Email for Alert" />
-            <Box background={"black"} p={"15px 25px"} borderRadius={"10px"}>
+            <Box background={"black"} p={"12px 25px"} borderRadius={"10px"}>
               <Image alt={"messenger"} src={"./sendMessage.svg"} />
             </Box>
           </Box>

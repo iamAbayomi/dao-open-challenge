@@ -12,15 +12,15 @@ const Badge = ({ item, background, textColor, isRowReverse }: Props) => {
   return (
     <Box
       display={"flex"}
-      gap={"21px"}
+      gap={"1.31rem"}
       flexDirection={isRowReverse ? "row-reverse" : "row"}
       background={background ? background : "#FBFBFB"}
-      p={"10px 20px"}
+      p={"0.625rem 1.25rem"}
       maxWidth={"max-content"}
       border={"1px solid #DBDBDB"}
-      borderRadius={"20px"}
+      borderRadius={"1.25rem"}
     >
-      {item?.image && <Image h={"19px"} alt={"image"} src={item?.image} />}
+      {item?.image && <Image h={"1.19rem"} alt={"image"} src={item?.image} />}
       <Text fontSize={"0.875rem"} color={textColor} whiteSpace={"nowrap"}>
         {item?.text}
       </Text>

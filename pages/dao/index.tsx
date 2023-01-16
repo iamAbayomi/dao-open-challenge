@@ -12,7 +12,13 @@ const Index = () => {
   return (
     <HomeLayout isDark={false}>
       <Box>
-        <Box display={"flex"} justifyContent={"space-between"} m={"100px 50px"}>
+        <Box
+          display={"flex"}
+          justifyContent={"space-between"}
+          m={{ base: "100px 30px", sm: "100px 50px" }}
+          gap={"50px"}
+          flexDir={{ base: "column", sm: "row" }}
+        >
           <Box>
             <Image height={"150px"} alt={"app-logo"} src={"./appDao.svg"} />
             <Text fontWeight={"700"} fontSize={"48px"}>
@@ -62,23 +68,27 @@ const Index = () => {
             </Box>
           </Box>
           <Button
+            gap={"10px"}
             fontWeight={"400"}
-            fontSize={"14px"}
             color={"white"}
             background={"#000000"}
-            p={"16px 50px 16px 50px"}
+            p={"24px 50px 24px 50px"}
           >
-            <Text>Join DAO</Text>
+            <Text fontSize={"20px"} fontWeight={"400"}>
+              Join DAO
+            </Text>
             <Image width={"18px"} alt="arrow-up" src="./arrow-up-right.svg" />
           </Button>
         </Box>
         <Box
-          margin={"190px 50px 0px"}
+          margin={{ base: "190px 30px 0px", sm: "190px 50px 0px" }}
           display={"flex"}
+          flexDir={{ base: "column", sm: "row" }}
           justifyContent={"space-between"}
+          gap={"70px"}
           pb={"46px"}
         >
-          <Box display={"flex"} gap={"20px"}>
+          <Box display={"flex"} gap={"20px"} overflowX={"scroll"}>
             {detailedDao?.map((item) => (
               <Badge
                 key={item?.id}
@@ -89,14 +99,22 @@ const Index = () => {
               />
             ))}
           </Box>
-          <Button background={"black"} color={"white"} borderRadius={"10px"}>
+          <Button
+            gap={"0.625rem"}
+            background={"black"}
+            color={"white"}
+            borderRadius={"10px"}
+            p={"1.5rem 3.125rem"}
+          >
             <IoMdAdd />
-            <Text ml={"10px"}>Create New Proposal</Text>
+            <Text fontWeight={"400"} fontSize={"20px"}>
+              Create New Proposal
+            </Text>
           </Button>
         </Box>
         <Box borderBottom={"0.1px solid #C6C6C6"} />
         <Box
-          m={"20px 50px 30px"}
+          m={{ base: "20px 30px 30px", sm: "20px 50px 30px" }}
           display={"flex"}
           gap={"80px"}
           flexDir={{ base: "column", md: "row" }}
@@ -115,8 +133,10 @@ const Index = () => {
             <Box
               display={"flex"}
               gap={"15"}
-              flexDir={{ base: "row", md: "column" }}
-              overflow={"auto"}
+              w={"100%"}
+              h={{ base: "12.5rem", sm: "max-content" }}
+              flexDir={{ base: "column", md: "column" }}
+              overflowX={"scroll"}
             >
               {categoriesData?.map((item: ICategories) => (
                 <Categories key={item?.id} item={item} />
