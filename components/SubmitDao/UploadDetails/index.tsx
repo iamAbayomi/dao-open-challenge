@@ -1,26 +1,31 @@
 import { Box, Text, Image, Button } from "@chakra-ui/react";
 import { MdArrowForward } from "react-icons/md";
 
-const UploadDetails = () => {
+interface Props {
+  isProposal?: boolean;
+}
+
+const UploadDetails = ({ isProposal }: Props) => {
   return (
     <Box>
       <Box>
         <Text
-          fontSize={"20px"}
-          mt={"81px"}
+          fontSize={isProposal ? "18px" : "20px"}
+          mt={isProposal ? "60px" : "81px"}
           fontStyle={"bold"}
-          fontWeight={"700"}
+          fontWeight={isProposal ? "400" : "700"}
         >
           Upload Proposal Image
         </Text>
-        <Text fontSize={"16px"}>
+        <Text fontSize={isProposal ? "12px" : "16px"}>
           Only PNG, JPEG and GIF formats are supported
         </Text>
       </Box>
       <Box
-        mt={"50px"}
+        mt={isProposal ? "20px" : "50px"}
         display={"flex"}
-        gap={"20"}
+        alignItems={"center"}
+        gap={"25px"}
         justifyContent={"space-between"}
       >
         <Box
@@ -35,6 +40,7 @@ const UploadDetails = () => {
             Drag and Drop Image here or Browse
           </Text>
         </Box>
+        {isProposal ? <Text>Or</Text> : <></>}
         <Box
           background={"#F2F2F2"}
           flexGrow={"1"}

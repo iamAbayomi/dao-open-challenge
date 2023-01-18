@@ -8,10 +8,10 @@ interface Props {
 const WhiteButton = ({ text }: Props) => {
   return (
     <Button
-      background={"white"}
+      background={"none"}
       gap={"10px"}
-      _focus={{ bg: "white" }}
-      _hover={{ bg: "white" }}
+      _focus={{ bg: "none" }}
+      _hover={{ bg: "none" }}
     >
       <Text fontWeight={"400"}>{text}</Text>
       <FiSave />

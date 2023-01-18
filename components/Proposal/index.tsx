@@ -1,59 +1,96 @@
-import { Box, Text, Input, Textarea } from "@chakra-ui/react";
+import { Box, CloseButton, Text } from "@chakra-ui/react";
+import { ReactNode, useState } from "react";
+import ForwardButton from "../Button/ForwardButton";
+import WhiteButton from "../Button/WhiteButton";
 import Modal from "../Modal";
+import ProposalCategory from "./ProposalCategory";
+import ProposalDetails from "./ProposalDetails";
+import Review from "./Review";
+interface IProps {
+  onClose: () => void;
+  children: ReactNode;
+  step: number;
+  proceedButton: () => void;
+}
 
-const Proposal = () => {
+const Proposal = ({ onClose, children }: IProps) => {
+  const [step, setStep] = useState<number>(1);
+
   return (
     <Modal onClose={() => {}}>
-      <Box>
-        <Box mt={"60px"}>
-          <Text fontSize={"18px"} fontWeight={"400"}>
-            Proposal Title
+      <Box backgroundColor={" #F8F8F8"} p={"50px 80px 40px 60px"}>
+        <Box display={"flex"} justifyContent={"space-between"}>
+          <Text fontSize={"38px"} fontWeight={"700"}>
+            Create New Proposal
           </Text>
-          <Input
-            height={"51px"}
-            mt={"10px"}
-            bg={"#F2F2F2"}
-            border={"1px solid #CACACA"}
-            placeholder={"Ex. Allow Custom Minting Fees"}
-            _placeholder={{ fontSize: "14px", color: "#A9A9A9" }}
-          />
+          <CloseButton onClick={onClose} />
         </Box>
-        <Box mt={"60px"}>
-          <Box
-            display={"flex"}
-            alignItems={"center"}
-            justifyContent={"space-between"}
-          >
-            <Box>
-              <Text>Proposal Description</Text>
-              <Text fontWeight={"400"} fontSize={"12px"}>
-                Disclaimer : Let your proposal description be descriptive as
-                possible.
-              </Text>
-            </Box>
+
+        <Box display={"flex"} gap={"5"} mt={"70px"}>
+          <Box>
             <Box
-              width={"53px"}
-              height={"53px"}
-              border={"4px solid #439F6E"}
-              borderRadius={"53px"}
-            >
-              <Text
-                margin={"12px auto"}
-                fontWeight={"700"}
-                fontSize={"12px"}
-                textAlign={"center"}
-              >
-                2000
-              </Text>
-            </Box>
+              width={"251px"}
+              height={"9px"}
+              background={"#E2E2E2"}
+              transform={"rotate(-180deg)"}
+              bg={"rgba(255, 122, 0, 0.33)"}
+            />
+            <Text mt={"5px"} fontSize={"13px"} fontWeight={"400"}>
+              Proposal Details
+            </Text>
           </Box>
-          <Textarea
-            bg={"#F2F2F2"}
-            mt={"20px"}
-            width={"100%"}
-            height={"250px"}
-          />
+          <Box>
+            <Box
+              width={"251px"}
+              height={"9px"}
+              background={step !== 1 ? "rgba(255, 122, 0, 0.66)" : "#E2E2E2"}
+              transform={"skew(-20deg)"}
+              borderRadius={"2px"}
+            />{" "}
+            <Text mt={"5px"} fontSize={"13px"} fontWeight={"400"}>
+              Proposal Category
+            </Text>
+          </Box>
+          <Box>
+            <Box
+              width={"251px"}
+              height={"9px"}
+              background={step === 3 ? "#FF7A00" : "#E2E2E2"}
+              transform={"skew(-20deg)"}
+            />
+            <Text mt={"5px"} fontSize={"13px"} fontWeight={"400"}>
+              Review
+            </Text>
+          </Box>
         </Box>
+        <Box>
+          {step === 1 ? (
+            <ProposalDetails />
+          ) : step === 2 ? (
+            <ProposalCategory />
+          ) : (
+            <Review />
+          )}
+        </Box>
+
+        {step !== 3 ? (
+          <Box display={"flex"} mt={"80px"} alignItems={"center"} gap={"30px"}>
+            <ForwardButton
+              text="Proceed"
+              onClick={step !== 3 ? () => setStep(step + 1) : onClose}
+            />
+            <WhiteButton text="Save Draft" />
+          </Box>
+        ) : (
+          <Box margin={"45px auto "} w={"100%"} maxW={"300px"}>
+            <ForwardButton
+              width="100%"
+              padding="26px 110px"
+              text="Submit"
+              onClick={onClose}
+            />
+          </Box>
+        )}
       </Box>
     </Modal>
   );
