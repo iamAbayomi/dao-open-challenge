@@ -4,6 +4,8 @@ import Badge from "../../components/Badge";
 import AllProposalSection from "../../components/Daos/AllProposals/AllProposalSection";
 import Categories from "../../components/Daos/Categories";
 import NewsLetter from "../../components/Daos/NewsLetter";
+import Modal from "../../components/Modal";
+import Proposal from "../../components/Proposal";
 import HomeLayout from "../../layout/HomeLayout";
 import { ICategories } from "../../types";
 import { categoriesData, detailedDao } from "../../utils/dummydata";
@@ -113,6 +115,7 @@ const Index = () => {
           </Button>
         </Box>
         <Box borderBottom={"0.1px solid #C6C6C6"} />
+        <Proposal />
         <Box
           m={{ base: "20px 30px 30px", sm: "20px 50px 30px" }}
           display={"flex"}

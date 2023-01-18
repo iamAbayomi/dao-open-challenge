@@ -18,16 +18,6 @@ const ContactDetails = () => {
           placeholder={"Ex. contact@opendao.org"}
         />
       </Box>
-      <Button
-        mt={"250px"}
-        bg={"#C2EC5B"}
-        p={"25px 40px 25px 40px"}
-        display={"flex"}
-        gap={"5"}
-      >
-        <Text>Proceed</Text>
-        <MdArrowForward />
-      </Button>
     </>
   );
 };

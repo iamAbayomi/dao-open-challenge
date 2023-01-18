@@ -51,16 +51,6 @@ const UploadDetails = () => {
           </Text>
         </Box>
       </Box>
-      <Button
-        mt={"100px"}
-        bg={"#C2EC5B"}
-        p={"25px 40px 25px 40px"}
-        display={"flex"}
-        gap={"5"}
-      >
-        <Text>Submit</Text>
-        <MdArrowForward />
-      </Button>
     </Box>
   );
 };
