@@ -18,6 +18,7 @@ const Modal = ({ onClose, children }: IProps) => {
       background={"rgba(27, 31, 36, 0.5)"}
       width={"100%"}
       height={"100%"}
+      zIndex={"1000"}
     >
       <Box
         width={"100%"}
@@ -26,6 +27,7 @@ const Modal = ({ onClose, children }: IProps) => {
         margin={"5vh auto 0px"}
         borderRadius={"10px"}
         overflowY={"scroll"}
+        onClick={() => {}}
       >
         {children}
       </Box>
