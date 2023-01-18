@@ -41,16 +41,6 @@ const ProfileHandles = () => {
           color={"#9F9F9F"}
         ></Select>
       </Box>
-      <Button
-        mt={"60px"}
-        bg={"#C2EC5B"}
-        p={"25px 40px 25px 40px"}
-        display={"flex"}
-        gap={"5"}
-      >
-        <Text>Proceed</Text>
-        <MdArrowForward />
-      </Button>
     </Box>
   );
 };

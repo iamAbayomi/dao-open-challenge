@@ -11,16 +11,7 @@ const DescribeDAO = () => {
         Share your mission statement with us. Maximum 280 characters
       </Text>
       <Textarea bg={"#F2F2F2"} mt={"20px"} width={"100%"} height={"300px"} />
-      <Button
-        mt={"60px"}
-        bg={"#C2EC5B"}
-        p={"25px 40px 25px 40px"}
-        display={"flex"}
-        gap={"5"}
-      >
-        <Text>Proceed</Text>
-        <MdArrowForward />
-      </Button>
+     
     </Box>
   );
 };

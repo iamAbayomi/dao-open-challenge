@@ -67,3 +67,7 @@ export interface IGlossaryIndex {
     index: string
     data: IGlossaryData[]    
 }
+
+export interface ICallback {
+    onClick: () => void
+}

@@ -17,7 +17,7 @@ const Tags = ({ text, color, border, borderRadius }: Props) => {
       background={color}
       border={border}
     >
-      <Text fontSize={"14px"} fontWeight={"400"}>
+      <Text fontSize={"0.875rem"} fontWeight={"400"}>
         {text}
       </Text>
     </Box>

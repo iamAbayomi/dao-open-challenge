@@ -1,4 +1,5 @@
 import { Box, Button, Input, Select, Text, Image } from "@chakra-ui/react";
+import { useState } from "react";
 import { MdArrowForward, MdClose } from "react-icons/md";
 import ContactDetails from "./ContactDetails";
 import DaoName from "./DaoName";
@@ -11,6 +12,7 @@ interface IProps {
 }
 
 const SubmitDao = ({ onClose }: IProps) => {
+  const [step, setStep] = useState<number>(1);
   return (
     <Box
       position={"fixed"}
@@ -24,11 +26,12 @@ const SubmitDao = ({ onClose }: IProps) => {
       <Box
         background={"white"}
         width={"100%"}
+        height={"700px"}
         maxWidth={"900px"}
-        margin={"9vh auto"}
+        margin={"5vh auto"}
         p={"50px 80px 40px 60px"}
         borderRadius={"10px"}
-        overflow={"auto"}
+        overflowY={"scroll"}
       >
         <Box display={"flex"} justifyContent={"space-between"}>
           <Text fontSize={"38px"} fontWeight={"700"}>
@@ -60,13 +63,31 @@ const SubmitDao = ({ onClose }: IProps) => {
           />
         </Box>
         <Box>
-          {/*
-          <DescribeDAO /> */}
-          {/* <ProfileHandles /> */}
-          {/* <DaoName /> */}
-          {/* <ContactDetails /> */}
-          <UploadDetails />
+          {step === 1 ? (
+            <DaoName />
+          ) : step === 2 ? (
+            <DescribeDAO />
+          ) : step === 3 ? (
+            <ProfileHandles />
+          ) : step === 4 ? (
+            <ContactDetails />
+          ) : (
+            <UploadDetails />
+          )}
         </Box>
+        <Button
+          mt={"60px"}
+          bg={"#C2EC5B"}
+          _focus={{ background: "#C2EC5B" }}
+          _hover={{ background: "#C2EC5B" }}
+          p={"25px 40px 25px 40px"}
+          display={"flex"}
+          gap={"5"}
+          onClick={step === 5 ? onClose : () => setStep(step + 1)}
+        >
+          <Text>{step === 5 ? "Submit" : "Proceed"}</Text>
+          <MdArrowForward />
+        </Button>
       </Box>
     </Box>
   );

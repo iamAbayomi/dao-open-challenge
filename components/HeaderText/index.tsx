@@ -11,7 +11,7 @@ interface IProps {
 const HeaderText = ({ name, link = "", color, isDark }: IProps) => {
   return (
     <Link href={link}>
-      <Box display={"flex"} m={"0px 10px 0px"} alignItems={"center"}>
+      <Box display={"flex"} m={"0px 20px 0px 0px"} alignItems={"center"}>
         <Text
           textAlign={"center"}
           color={color}
