@@ -12,7 +12,7 @@ const ForwardButton = ({ text, onClick, width, padding }: Props) => {
   return (
     <Button
       width={width ? width : "max-content"}
-      p={padding ?? "22px 50px"}
+      p={padding ? padding : "22px 50px"}
       background={"#C2EC5B"}
       gap={"14px"}
       _focus={{ bg: "#C2EC5B" }}

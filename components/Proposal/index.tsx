@@ -23,7 +23,10 @@ const Proposal = ({ onClose, children }: IProps) => {
           <Text fontSize={"38px"} fontWeight={"700"}>
             Create New Proposal
           </Text>
-          <CloseButton onClick={onClose} />
+          <CloseButton
+            background={" rgba(217, 217, 217, 0.5)"}
+            onClick={onClose}
+          />
         </Box>
 
         <Box display={"flex"} gap={"5"} mt={"70px"}>
@@ -82,10 +85,10 @@ const Proposal = ({ onClose, children }: IProps) => {
             <WhiteButton text="Save Draft" />
           </Box>
         ) : (
-          <Box margin={"45px auto "} w={"100%"} maxW={"300px"}>
+          <Box margin={"45px auto "} w={"100%"} maxW={"200px"}>
             <ForwardButton
               width="100%"
-              padding="26px 110px"
+              padding="26px 10px"
               text="Submit"
               onClick={onClose}
             />
