@@ -8,16 +8,13 @@ import ProposalDetails from "./ProposalDetails";
 import Review from "./Review";
 interface IProps {
   onClose: () => void;
-  children: ReactNode;
-  step: number;
-  proceedButton: () => void;
 }
 
-const Proposal = ({ onClose, children }: IProps) => {
+const Proposal = ({ onClose }: IProps) => {
   const [step, setStep] = useState<number>(1);
 
   return (
-    <Modal onClose={() => {}}>
+    <Modal onClose={onClose}>
       <Box backgroundColor={" #F8F8F8"} p={"50px 80px 40px 60px"}>
         <Box display={"flex"} justifyContent={"space-between"}>
           <Text fontSize={"38px"} fontWeight={"700"}>
@@ -82,7 +79,7 @@ const Proposal = ({ onClose, children }: IProps) => {
               text="Proceed"
               onClick={step !== 3 ? () => setStep(step + 1) : onClose}
             />
-            <WhiteButton text="Save Draft" />
+            <WhiteButton text="Save Draft" onClick={onClose} />
           </Box>
         ) : (
           <Box margin={"45px auto "} w={"100%"} maxW={"200px"}>
