@@ -151,9 +151,9 @@ export const footerData: IItem[] = [
 
 export const headerData: IHeaderLink[] = [
   { id: 1, name: "Explore", link: "/explore" },
-  { id: 1, name: "Learn", link: "/glossary" },
-  { id: 1, name: "About Us", link: "/aboutus" },
-  { id: 1, name: "Documentation", link: "" }
+  { id: 2, name: "Learn", link: "/glossary" },
+  { id: 3, name: "About Us", link: "/aboutus" },
+  { id: 4, name: "Documentation", link: "" }
 ];
 
 export const aboutusData: IAboutUs[] = [
@@ -335,11 +335,6 @@ export const glossaryData: IGlossaryIndex[] = [
         title: "Burn",
         tags: "(verb)",
         description: `the process of removing tokens from a cryptocurrency’s circulating supply, usually done by sending them to an inaccessible wallet address. Other digital assets, such as NFTs, can also be burned via the same process. `
-      },
-      {
-        title: "",
-        tags: "",
-        description: ``
       }
     ]
   },
@@ -556,8 +551,6 @@ const same: IGlossaryData[] = [
     description: ``
   }
 ];
-
-
 
 // const Title = () => {
 //   return (
