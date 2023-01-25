@@ -12,10 +12,10 @@ const Badge = ({ item, background, textColor, isRowReverse }: Props) => {
   return (
     <Box
       display={"flex"}
-      gap={"1.31rem"}
+      gap={{ base: "0.625rem", sm: "1.31rem" }}
       flexDirection={isRowReverse ? "row-reverse" : "row"}
       background={background ? background : "#FBFBFB"}
-      p={"0.625rem 1.25rem"}
+      p={{ base: "0.625rem", sm: "0.625rem 1.25rem" }}
       maxWidth={"max-content"}
       border={"1px solid #DBDBDB"}
       borderRadius={"1.25rem"}

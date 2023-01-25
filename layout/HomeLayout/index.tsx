@@ -9,7 +9,7 @@ type props = {
   children: ReactNode;
 };
 
-const HomeLayout = ({ isDark, children }: props) => {
+const   HomeLayout = ({ isDark, children }: props) => {
   return (
     <Box margin={"auto"} maxWidth={"2000px"}>
       <Header isDark={isDark} />

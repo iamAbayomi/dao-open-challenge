@@ -15,7 +15,12 @@ const Proposal = ({ onClose }: IProps) => {
 
   return (
     <Modal onClose={onClose}>
-      <Box backgroundColor={" #F8F8F8"} p={"50px 80px 40px 60px"}>
+      <Box
+        margin={"0px 10px 0px"}
+        backgroundColor={"#F8F8F8"}
+        p={{ base: "50px 30px 60px", sm: "50px 80px 40px 60px" }}
+        borderRadius={"20px"}
+      >
         <Box display={"flex"} justifyContent={"space-between"}>
           <Text fontSize={"38px"} fontWeight={"700"}>
             Create New Proposal
@@ -27,9 +32,8 @@ const Proposal = ({ onClose }: IProps) => {
         </Box>
 
         <Box display={"flex"} gap={"5"} mt={"70px"}>
-          <Box>
+          <Box width={"100%"}>
             <Box
-              width={"251px"}
               height={"9px"}
               background={"#E2E2E2"}
               transform={"rotate(-180deg)"}
@@ -39,9 +43,9 @@ const Proposal = ({ onClose }: IProps) => {
               Proposal Details
             </Text>
           </Box>
-          <Box>
+          <Box width={"100%"}>
             <Box
-              width={"251px"}
+              width={"100%"}
               height={"9px"}
               background={step !== 1 ? "rgba(255, 122, 0, 0.66)" : "#E2E2E2"}
               transform={"skew(-20deg)"}
@@ -51,9 +55,9 @@ const Proposal = ({ onClose }: IProps) => {
               Proposal Category
             </Text>
           </Box>
-          <Box>
+          <Box width={"100%"}>
             <Box
-              width={"251px"}
+              width={"100%"}
               height={"9px"}
               background={step === 3 ? "#FF7A00" : "#E2E2E2"}
               transform={"skew(-20deg)"}

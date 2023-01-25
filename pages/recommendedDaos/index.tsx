@@ -6,8 +6,15 @@ import HomeLayout from "../../layout/HomeLayout";
 import RecommendedDaos from "../../components/RecommendedDao";
 import { IDaoContainer } from "../../types";
 import { hotDaoData, newDaoData } from "../../utils/dummydata";
+import { useRouter } from "next/router";
 
 const Index = () => {
+  const router = useRouter();
+
+  function viewRecommendations() {
+    router.push("#recommended");
+  }
+
   const Span = styled.span`
     color: #c2ec5b;
   `;
@@ -25,7 +32,7 @@ const Index = () => {
             textAlign={"center"}
           >
             <Text fontSize={"200px"}>🎉</Text>
-            <Text>Congratualtions , we found the right DAO for you!</Text>
+            <Text>Congratulations , we found the right DAO for you!</Text>
             <Text
               m={"10px 20px 0px"}
               fontFamily={"Maglony"}
@@ -36,7 +43,15 @@ const Index = () => {
               <br /> we found out that you’re <Span>Investment</Span>{" "}
               Interested.
             </Text>
-            <Button mt={"60px"} p={"25px 45px"} background={"#FF7A00"}>
+
+            <Button
+              mt={"60px"}
+              p={"25px 45px"}
+              background={"#FF7A00"}
+              onClick={viewRecommendations}
+              _hover={{ background: "#FF7A00" }}
+              _focus={{ background: "#FF7A00" }}
+            >
               <Text m={"10px 10px 10px 0px"} fontWeight={"400"}>
                 View Recommendations
               </Text>
@@ -53,6 +68,7 @@ const Index = () => {
           </Box>
         </Box>
         <Box
+          id="recommended"
           display={"flex"}
           p={"30px 60px"}
           borderBottom={"0.2px solid #BABABA"}
@@ -71,7 +87,7 @@ const Index = () => {
         </Box>
         <Box
           display={"grid"}
-          gridTemplateColumns={"repeat(auto-fit, minmax(300px, 1fr))"}
+          gridTemplateColumns={"repeat(auto-fit, minmax(280px, 1fr))"}
           margin={"50px auto"}
           maxWidth={{ base: "400px", md: "832px", lg: "1280px" }}
           gap={"30px"}
