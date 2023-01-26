@@ -43,10 +43,17 @@ const Review = () => {
           padding={"10px 32px 10px 10px"}
           display={"flex"}
           justifyContent={"space-between"}
-          alignItems={"center"}
+          alignItems={{ base: "center", sm: "center" }}
+          flexDir={{ base: "column", sm: "row" }}
           borderRadius={"10px"}
+          gap={"30px"}
         >
-          <Box display={"flex"} alignItems={"center"} gap={"30px"}>
+          <Box
+            display={"flex"}
+            alignItems={{ base: "center", sm: "center" }}
+            flexDir={{ base: "column", sm: "row" }}
+            gap={"30px"}
+          >
             <Image alt={""} src={"./review-image.jpg"} />
             <Box>
               <Text>Image98.png</Text>

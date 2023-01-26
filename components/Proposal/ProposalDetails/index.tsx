@@ -19,8 +19,10 @@ const ProposalDetails = () => {
       <Box mt={"60px"}>
         <Box
           display={"flex"}
-          alignItems={"center"}
+          alignItems={{ base: "start", sm: "center" }}
           justifyContent={"space-between"}
+          flexDir={{ base: "column", sm: "row" }}
+          gap={"30px"}
         >
           <Box>
             <Text>Proposal Description</Text>

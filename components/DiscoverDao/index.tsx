@@ -1,4 +1,4 @@
-import { Box, Text, Image, Button } from "@chakra-ui/react";
+import { Box, Text, Image, Button, Input } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -34,7 +34,7 @@ const DiscoverDao = () => {
       </Text>
       {isExplorePage() && (
         <Box
-          m={"63px 50px 80px 0px"}
+          m={{ base: "63px 0px 80px", md: "63px 50px 80px 0px" }}
           background={"#FF7A00"}
           borderRadius={"10px"}
           pos={"relative"}
@@ -66,8 +66,10 @@ const DiscoverDao = () => {
               onClick={toggleSubmitDao}
               p={"29px 70px 26px"}
               background={"#C2EC5B"}
+              _focus={{ bg: "#C2EC5B" }}
+              _hover={{ bg: "#C2EC5B" }}
             >
-              <Text fontWeight={"400"} fontSize={"16px"}>
+              <Text fontWeight={"500"} fontSize={"16px"}>
                 Submit a DAO
               </Text>
             </Button>
@@ -95,7 +97,6 @@ const DiscoverDao = () => {
       {isOpen && <SubmitDao onClose={toggleSubmitDao} />}
       <Box margin={"32px 20px 0px 20px"} display={"flex"} alignItems={"center"}>
         <Box
-          height={"70px"}
           width={"43.75rem"}
           border={"1px solid #BEBEBE"}
           borderRadius={"20px"}
@@ -103,23 +104,28 @@ const DiscoverDao = () => {
         >
           <Box
             display={"flex"}
-            margin={"25px 67px 12px 37px"}
+            margin={"10px 10px 10px 37px"}
             boxSizing={"border-box"}
           >
             <Image
+              m={"10px 0px"}
               width={"20px"}
               height={"20px"}
               alt="search"
               src="./search.svg"
             />
-            <Text
+            <Input
               ml={"15px"}
               color={"#919191"}
               fontWeight={"400"}
               fontSize={"12px"}
-            >
-              Search for DAOs
-            </Text>
+              border={"none"}
+              _focus={{ border: "none" }}
+              _hover={{ border: "none" }}
+              _active={{ border: "none" }}
+              _selected={{ border: "none" }}
+              placeholder={"Search for DAOs"}
+            />
           </Box>
         </Box>
         <Box

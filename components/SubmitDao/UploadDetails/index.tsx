@@ -24,11 +24,13 @@ const UploadDetails = ({ isProposal }: Props) => {
       <Box
         mt={isProposal ? "20px" : "50px"}
         display={"flex"}
+        flexDir={{ base: "column", sm: "row" }}
         alignItems={"center"}
         gap={"25px"}
         justifyContent={"space-between"}
       >
         <Box
+          width={{ base: "100%", sm: "max-content" }}
           background={"#F2F2F2"}
           flexGrow={"3"}
           border={"1px dashed #CACACA"}
@@ -42,6 +44,7 @@ const UploadDetails = ({ isProposal }: Props) => {
         </Box>
         {isProposal ? <Text>Or</Text> : <></>}
         <Box
+          width={{ base: "100%", sm: "max-content" }}
           background={"#F2F2F2"}
           flexGrow={"1"}
           p={"50px"}

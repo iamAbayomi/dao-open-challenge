@@ -1,6 +1,15 @@
-import { Box, Button, Input, Select, Text, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Input,
+  Select,
+  Text,
+  Image,
+  CloseButton
+} from "@chakra-ui/react";
 import { useState } from "react";
 import { MdArrowForward, MdClose } from "react-icons/md";
+import Modal from "../Modal";
 import ContactDetails from "./ContactDetails";
 import DaoName from "./DaoName";
 import DescribeDAO from "./DescribeDAO";
@@ -14,51 +23,45 @@ interface IProps {
 const SubmitDao = ({ onClose }: IProps) => {
   const [step, setStep] = useState<number>(1);
   return (
-    <Box
-      position={"fixed"}
-      top={"0px"}
-      left={"0px"}
-      background={"rgba(27, 31, 36, 0.5)"}
-      height={"100%"}
-      width={"100%"}
-      zIndex={"2000"}
-    >
+    <Modal onClose={onClose}>
       <Box
         background={"white"}
-        width={"100%"}
-        height={"700px"}
-        maxWidth={"900px"}
-        margin={"5vh auto"}
-        p={"50px 80px 40px 60px"}
         borderRadius={"10px"}
-        overflowY={"scroll"}
+        pos={"relative"}
+        margin={{ base: "10vh 10px 0px 10px", md: "5vh auto" }}
+        p={{ base: "50px 30px", md: "50px 80px 40px 60px" }}
+        overflowX={"hidden"}
       >
         <Box display={"flex"} justifyContent={"space-between"}>
           <Text fontSize={"38px"} fontWeight={"700"}>
             Submit a DAO
           </Text>
-          <MdClose onClick={onClose} />
+          <CloseButton
+            background={"rgba(217, 217, 217, 0.5)"}
+            onClick={onClose}
+          />
         </Box>
 
         <Box display={"flex"} gap={"5"} mt={"20px"}>
           <Box
             width={"251px"}
             height={"9px"}
-            background={"#E2E2E2"}
+            background={"rgba(255, 122, 0, 0.33)"}
             transform={"rotate(-180deg)"}
-            bg={"rgba(255, 122, 0, 0.33)"}
           />
           <Box
             width={"251px"}
             height={"9px"}
-            background={"#E2E2E2"}
+            background={
+              step !== 1 && step !== 2 ? "rgba(255, 122, 0, 0.66)" : "#E2E2E2"
+            }
             transform={"skew(-20deg)"}
             borderRadius={"2px"}
           />{" "}
           <Box
             width={"251px"}
             height={"9px"}
-            background={"#E2E2E2"}
+            background={step === 5 ? "#FF7A00" : "#E2E2E2"}
             transform={"skew(-20deg)"}
           />
         </Box>
@@ -89,7 +92,7 @@ const SubmitDao = ({ onClose }: IProps) => {
           <MdArrowForward />
         </Button>
       </Box>
-    </Box>
+    </Modal>
   );
 };
 
