@@ -1,4 +1,5 @@
 import { Box, Image, Text } from "@chakra-ui/react";
+import Link from "next/link";
 import { IItem, IHeaderLink } from "../../types";
 import { headerData, resourcesData } from "../../utils/dummydata";
 import HeaderText from "../HeaderText";
@@ -63,10 +64,12 @@ const Footer = () => {
         </Text>
         <Box mr={"40px"}>
           <Text fontWeight={"600"}>Resources</Text>
-          {resourcesData?.map((item: IItem) => (
-            <Text key={item?.id} m={"20px 0px 20px 0px"} fontWeight={"300"}>
-              {item.name}
-            </Text>
+          {resourcesData?.map((item: IHeaderLink) => (
+            <Link key={item?.id} href={item.link}>
+              <Text m={"20px 0px 20px 0px"} fontWeight={"300"}>
+                {item.name}
+              </Text>
+            </Link>
           ))}
         </Box>
       </Box>

@@ -1,8 +1,18 @@
 import { Box, Button, Image, Input, Text } from "@chakra-ui/react";
+import { useState } from "react";
 import { gettingStartedData } from "../../../utils/dummydata";
 import GettingStartedComponent from "../GettingStartedComponent";
 
 const GettingStartedSection = () => {
+  const [isSendNewsLetter, setNewsLetter] = useState<boolean>(false);
+
+  function sendNewsLetter() {
+    setNewsLetter(true)
+    setTimeout(() => {
+      setNewsLetter(false);
+    }, 3000);
+  }
+
   return (
     <Box position={"relative"}>
       <Box
@@ -78,12 +88,12 @@ const GettingStartedSection = () => {
         margin={"275px auto 100px auto"}
         maxWidth={"1100px"}
         background={"#C2EC5B"}
-        p={"60px 60px"}
+        p={{ base: "10px 10px 40px", sm: "60px 60px" }}
         borderRadius={"20px"}
         boxSizing={"border-box"}
       >
         <Box
-          m={"0px 40px"}
+          m={{ base: "0px 20px", sm: "0px 40px" }}
           display={"flex"}
           alignItems={"center"}
           justifyContent={"space-between"}
@@ -99,9 +109,12 @@ const GettingStartedSection = () => {
             display={"flex"}
             flexDir={{ base: "column", xl: "row" }}
             gap={"18px"}
+            w={"100%"}
+            maxW={{ base: "340px", sm: "max-content" }}
           >
             <Input
               background={"white"}
+              w={"100%"}
               maxW={"340px"}
               placeholder={"Your Favourite Email Address"}
               _placeholder={{ fontSize: "12px", color: "#CCCCCC" }}
@@ -111,7 +124,11 @@ const GettingStartedSection = () => {
               maxWidth={{ base: "340px", xl: "max-content" }}
               p={"20px 30px 20px 30px"}
               background={"black"}
+              _focus={{ background: "black" }}
+              _hover={{ background: "black" }}
               color={"white"}
+              isLoading={isSendNewsLetter}
+              onClick={sendNewsLetter}
             >
               <Text fontSize={"12px"}>Join Newsletter</Text>
             </Button>
