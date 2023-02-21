@@ -3,21 +3,18 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { ICategory } from "../../types";
 import { category } from "../../utils";
-import { useViewPage } from "../../utils/helpers";
+import { useLoadingButton } from "../../utils/helpers";
 import Category from "../Category";
 import QuickSurvey from "../QuickSurvey";
-import SubmitDao from "../SubmitDao";
 
 const ValuePropositon = () => {
   const [showQuickSurvey, setShowQuickSurvey] = useState<boolean>(false);
+  const { isLoading, onClick } = useLoadingButton();
+
   const router = useRouter();
 
   function toggleShowQuickSurvey() {
     setShowQuickSurvey(!showQuickSurvey);
-  }
-
-  function viewPage(path: string) {
-    router.push(path);
   }
 
   return (
@@ -58,7 +55,8 @@ const ValuePropositon = () => {
             background={"#C2EC5B"}
             p={"25px 30px"}
             _hover={{ background: "#C2EC5B" }}
-            onClick={() => viewPage("/explore")}
+            isLoading={isLoading}
+            onClick={() => onClick("/explore")}
           >
             <Image alt="explore" src="./explore.svg" />
             <Text ml={"10px"} fontWeight={"400"}>

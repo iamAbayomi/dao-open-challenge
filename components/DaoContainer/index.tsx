@@ -1,7 +1,7 @@
 import { Box, Text, Image, Button } from "@chakra-ui/react";
-import { useRouter } from "next/router";
 import { MdOutlineStarPurple500 } from "react-icons/md";
 import { IDaoContainer } from "../../types";
+import { useLoadingButton } from "../../utils/helpers";
 import Tags from "../Tags";
 
 interface IProps {
@@ -9,10 +9,8 @@ interface IProps {
 }
 
 const DaoContainer = ({ item }: IProps) => {
-  const router = useRouter();
-  function viewDao() {
-    router.push("/dao");
-  }
+  const { isLoading, onClick } = useLoadingButton();
+
   return (
     <Box
       className="dao-container"
@@ -73,9 +71,10 @@ const DaoContainer = ({ item }: IProps) => {
           fontWeight={"400"}
           fontSize={"14px"}
           color={"white"}
+          isLoading={isLoading}
           background={"#000000"}
           p={"16px 50px 16px 50px"}
-          onClick={viewDao}
+          onClick={() => onClick("/dao")}
           _focus={{ background: "black" }}
           _hover={{ background: "black" }}
         >

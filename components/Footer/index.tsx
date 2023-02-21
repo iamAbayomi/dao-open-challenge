@@ -3,6 +3,7 @@ import Link from "next/link";
 import { IItem, IHeaderLink } from "../../types";
 import { headerData, resourcesData } from "../../utils/dummydata";
 import HeaderText from "../HeaderText";
+import ProductInfoLink from "../Links/ProductInfoLink";
 
 const Footer = () => {
   return (
@@ -48,15 +49,17 @@ const Footer = () => {
           <Text fontWeight={"350"} fontSize={"13px"}>
             Join Our Community
           </Text>
-          <Box mt={"30px"} display={"flex"}>
-            <Image width={"35px"} alt={"chat"} src={"./chat.svg"} />
-            <Image
-              width={"35px"}
-              ml={"30px"}
-              alt="twitter"
-              src="./twitter.svg"
-            />
-          </Box>
+          <ProductInfoLink>
+            <Box mt={"30px"} display={"flex"}>
+              <Image width={"35px"} alt={"chat"} src={"./chat.svg"} />
+              <Image
+                width={"35px"}
+                ml={"30px"}
+                alt="twitter"
+                src="./twitter.svg"
+              />
+            </Box>
+          </ProductInfoLink>
         </Box>
         <Text m={"90px 0px 90px"} fontWeight={"330"} fontSize={"15px"}>
           The one-stop-shop to find, invest <br /> and vote in extraordinary

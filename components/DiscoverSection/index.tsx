@@ -1,7 +1,8 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Link, Text } from "@chakra-ui/react";
 import { useRef } from "react";
 import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
 import { IDaoContainer } from "../../types";
+import { productDocumentationLink } from "../../utils/constants";
 import { hotDaoData, newDaoData } from "../../utils/dummydata";
 import DaoContainer from "../DaoContainer";
 import DiscoverDao from "../DiscoverDao";
@@ -129,9 +130,15 @@ const DiscoverSection = () => {
             ))}
           </Box>
         </Box>
-        <Text fontWeight={"400"} mt={"53px"} textAlign={"center"}>
-          See More
-        </Text>
+        <Link
+          textDecoration={"none"}
+          href={"/recommendedDaos"}
+          _visited={{ textDecoration: "none" }}
+        >
+          <Text fontWeight={"400"} mt={"53px"} textAlign={"center"}>
+            See More
+          </Text>
+        </Link>
       </Box>
     </Box>
   );
