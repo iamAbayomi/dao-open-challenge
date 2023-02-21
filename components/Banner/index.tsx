@@ -1,6 +1,5 @@
 import { Box, Text, Image, Link } from "@chakra-ui/react";
 import styled from "@emotion/styled";
-import { useRouter } from "next/router";
 import { useState } from "react";
 
 const Banner = () => {
@@ -44,14 +43,16 @@ const Banner = () => {
                   <Span> Click Here</Span>
                 </Link>
               </Text>
-              <Image
-                display={{ base: "none", sm: "block" }}
-                ml={"6px"}
-                height={"18px"}
-                width={"18px"}
-                alt="forward-arrow"
-                src="./forward-arrow.svg"
-              />
+              <Box>
+                <Image
+                  display={{ base: "none", sm: "block" }}
+                  ml={"6px"}
+                  height={"18px"}
+                  width={"18px"}
+                  alt="forward-arrow"
+                  src="./forward-arrow.svg"
+                />
+              </Box>
             </Box>
           </Box>
         </Box>

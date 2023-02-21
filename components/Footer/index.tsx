@@ -51,8 +51,14 @@ const Footer = () => {
           </Text>
           <ProductInfoLink>
             <Box mt={"30px"} display={"flex"}>
-              <Image width={"35px"} alt={"chat"} src={"./chat.svg"} />
               <Image
+                className="pointer"
+                width={"35px"}
+                alt={"chat"}
+                src={"./chat.svg"}
+              />
+              <Image
+                className="pointer"
                 width={"35px"}
                 ml={"30px"}
                 alt="twitter"
@@ -69,7 +75,11 @@ const Footer = () => {
           <Text fontWeight={"600"}>Resources</Text>
           {resourcesData?.map((item: IHeaderLink) => (
             <Link key={item?.id} href={item.link}>
-              <Text m={"20px 0px 20px 0px"} fontWeight={"300"}>
+              <Text
+                className="pointer"
+                m={"20px 0px 20px 0px"}
+                fontWeight={"300"}
+              >
                 {item.name}
               </Text>
             </Link>

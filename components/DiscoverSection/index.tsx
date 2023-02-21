@@ -56,6 +56,7 @@ const DiscoverSection = () => {
                 maxWidth={"max-content"}
                 borderRadius={"5px"}
                 p={"4px 7px 4px 7px"}
+                className={"pointer"}
               >
                 <IoMdArrowBack onClick={moveTheHotDaoBackward} />
               </Box>
@@ -65,6 +66,7 @@ const DiscoverSection = () => {
                 p={"4px 7px 4px 7px"}
                 maxWidth={"max-content"}
                 borderRadius={"5px"}
+                className={"pointer"}
               >
                 <IoMdArrowForward onClick={moveTheHotDaoForward} />
               </Box>
@@ -97,6 +99,7 @@ const DiscoverSection = () => {
             </Text>
             <Box display={"flex"} mr={"50px"}>
               <Box
+                className={"pointer"}
                 background={"#F2F2F2"}
                 maxWidth={"max-content"}
                 borderRadius={"5px"}
@@ -106,6 +109,7 @@ const DiscoverSection = () => {
                 <IoMdArrowBack />
               </Box>
               <Box
+                className={"pointer"}
                 background={"#F2F2F2"}
                 ml={"20px"}
                 p={"4px 7px 4px 7px"}
@@ -135,7 +139,12 @@ const DiscoverSection = () => {
           href={"/recommendedDaos"}
           _visited={{ textDecoration: "none" }}
         >
-          <Text fontWeight={"400"} mt={"53px"} textAlign={"center"}>
+          <Text
+            className="pointer"
+            fontWeight={"400"}
+            mt={"53px"}
+            textAlign={"center"}
+          >
             See More
           </Text>
         </Link>

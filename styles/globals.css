@@ -101,3 +101,16 @@ p {
 .clear{
   clear: both;
 }
+
+
+.pointer {
+  cursor: pointer;
+}
+
+
+a,button, .pointer{
+  transition: transform 0.4s ;
+}
+a:hover,button:hover, .pointer:hover{
+ transform: translate(0px, -10px)
+}
