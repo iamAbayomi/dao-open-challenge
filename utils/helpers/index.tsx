@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 export const useIsDarkMode = () => {
   const router = useRouter();
@@ -7,7 +8,27 @@ export const useIsDarkMode = () => {
     : false;
 };
 
-export const useViewPage = (page: string) => {
+export const useViewPage = () => {
   const router = useRouter();
-  router.push(`${page}`);
+  function onViewPage(page: string, callBack?: () => void) {
+    router.push(`${page}`);
+    callBack && callBack();
+  }
+  return { onViewPage };
+};
+
+export const useLoadingButton = () => {
+  const [isLoading, setLoading] = useState<boolean>(false);
+  const { onViewPage } = useViewPage();
+
+  function onClick(page: string, callBack?: () => void) {
+    setLoading(true);
+
+    setTimeout(() => {
+      onViewPage(page, () => {
+        setLoading(false);
+      });
+    }, 1000);
+  }
+  return { isLoading, onClick };
 };
