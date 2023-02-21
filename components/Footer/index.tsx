@@ -1,7 +1,9 @@
 import { Box, Image, Text } from "@chakra-ui/react";
+import Link from "next/link";
 import { IItem, IHeaderLink } from "../../types";
 import { headerData, resourcesData } from "../../utils/dummydata";
 import HeaderText from "../HeaderText";
+import ProductInfoLink from "../Links/ProductInfoLink";
 
 const Footer = () => {
   return (
@@ -47,15 +49,17 @@ const Footer = () => {
           <Text fontWeight={"350"} fontSize={"13px"}>
             Join Our Community
           </Text>
-          <Box mt={"30px"} display={"flex"}>
-            <Image width={"35px"} alt={"chat"} src={"./chat.svg"} />
-            <Image
-              width={"35px"}
-              ml={"30px"}
-              alt="twitter"
-              src="./twitter.svg"
-            />
-          </Box>
+          <ProductInfoLink>
+            <Box mt={"30px"} display={"flex"}>
+              <Image width={"35px"} alt={"chat"} src={"./chat.svg"} />
+              <Image
+                width={"35px"}
+                ml={"30px"}
+                alt="twitter"
+                src="./twitter.svg"
+              />
+            </Box>
+          </ProductInfoLink>
         </Box>
         <Text m={"90px 0px 90px"} fontWeight={"330"} fontSize={"15px"}>
           The one-stop-shop to find, invest <br /> and vote in extraordinary
@@ -63,10 +67,12 @@ const Footer = () => {
         </Text>
         <Box mr={"40px"}>
           <Text fontWeight={"600"}>Resources</Text>
-          {resourcesData?.map((item: IItem) => (
-            <Text key={item?.id} m={"20px 0px 20px 0px"} fontWeight={"300"}>
-              {item.name}
-            </Text>
+          {resourcesData?.map((item: IHeaderLink) => (
+            <Link key={item?.id} href={item.link}>
+              <Text m={"20px 0px 20px 0px"} fontWeight={"300"}>
+                {item.name}
+              </Text>
+            </Link>
           ))}
         </Box>
       </Box>

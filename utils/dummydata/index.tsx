@@ -9,6 +9,7 @@ import {
   IInfoContainer,
   IItem
 } from "../../types";
+import { productDocumentationLink } from "../constants";
 
 export const badgeData: IBadge[] = [
   {
@@ -123,11 +124,11 @@ export const gettingStartedData: string[] = [
   "Do I need crypto to join or invest in a DAO?"
 ];
 
-export const resourcesData: IItem[] = [
-  { id: 1, name: "Knowledge base" },
-  { id: 2, name: "Support" },
-  { id: 3, name: "FAQ" },
-  { id: 4, name: "Dictionary" }
+export const resourcesData: IHeaderLink[] = [
+  { id: 1, name: "Knowledge base", link: productDocumentationLink },
+  { id: 2, name: "Support", link: "/aboutus" },
+  { id: 3, name: "FAQ", link: "#getting-started-section" },
+  { id: 4, name: "Dictionary", link: "/glossary" }
 ];
 
 export const footerData: IItem[] = [
@@ -153,7 +154,7 @@ export const headerData: IHeaderLink[] = [
   { id: 1, name: "Explore", link: "/explore" },
   { id: 2, name: "Learn", link: "/glossary" },
   { id: 3, name: "About Us", link: "/aboutus" },
-  { id: 4, name: "Documentation", link: "" }
+  { id: 4, name: "Documentation", link: productDocumentationLink }
 ];
 
 export const aboutusData: IAboutUs[] = [
