@@ -1,7 +1,5 @@
 import { Box, Button, Text, Image } from "@chakra-ui/react";
-import { useRouter } from "next/router";
 import { useState } from "react";
-import { ICategory } from "../../types";
 import { category } from "../../utils";
 import { useLoadingButton } from "../../utils/helpers";
 import Category from "../Category";
@@ -10,8 +8,6 @@ import QuickSurvey from "../QuickSurvey";
 const ValuePropositon = () => {
   const [showQuickSurvey, setShowQuickSurvey] = useState<boolean>(false);
   const { isLoading, onClick } = useLoadingButton();
-
-  const router = useRouter();
 
   function toggleShowQuickSurvey() {
     setShowQuickSurvey(!showQuickSurvey);

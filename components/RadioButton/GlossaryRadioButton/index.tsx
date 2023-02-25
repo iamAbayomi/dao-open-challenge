@@ -6,7 +6,7 @@ const GlossaryComponent = (props: any) => {
     useRadio(radioButtonProps);
 
   return (
-    <chakra.label {...htmlProps} cursor={"pointer"}>
+    <chakra.label {...htmlProps} className={"pointer"}>
       <input {...getInputProps()} hidden />
       {/* <Link href={`#${text}`}> */}
       <Box

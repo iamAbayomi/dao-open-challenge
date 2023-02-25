@@ -58,6 +58,7 @@ const Index = () => {
               <MdArrowForward />
             </Button>
             <Box
+              className="pointer"
               display={"flex"}
               maxWidth={"max-content"}
               margin={"40px auto 60px"}
