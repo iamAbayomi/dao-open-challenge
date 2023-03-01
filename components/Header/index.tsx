@@ -1,12 +1,11 @@
 import { Box, Button, Text, Image, CloseButton } from "@chakra-ui/react";
-import { useRouter } from "next/router";
 import { useState } from "react";
 import { IHeaderLink } from "../../types";
 import { headerData } from "../../utils/dummydata";
-import { useIsDarkMode } from "../../utils/helpers";
 import { IoMdClose } from "react-icons/io";
 import HeaderComponent from "./HeaderComponent";
 import ResponsiveMenuHeaderComponent from "./ResponsiveMenuHeaderComponent";
+import { useGetPathname } from "../../utils/helpers";
 
 interface IProps {
   isDark: boolean;
@@ -14,9 +13,16 @@ interface IProps {
 
 const Header = ({ isDark }: IProps) => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const pathname = useGetPathname();
 
   function toggleMenu() {
     setShowMenu(!showMenu);
+  }
+
+  function checkPathname(name: string) {
+    if (pathname.includes(name.toLowerCase())) {
+      return true;
+    }
   }
 
   return (
@@ -49,6 +55,7 @@ const Header = ({ isDark }: IProps) => {
                   link={item?.link}
                   color={"black"}
                   isDark={isDark}
+                  active={checkPathname(item?.link)}
                 />
               ))}
             </Box>

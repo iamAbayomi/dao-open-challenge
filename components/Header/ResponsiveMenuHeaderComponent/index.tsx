@@ -1,19 +1,23 @@
 import { Box, Text, Image } from "@chakra-ui/react";
 import Link from "next/link";
+import { useGetPathname } from "../../../utils/helpers";
 
 interface IProps {
   name: string;
   link: string;
   color?: string;
   isDark?: boolean;
+  active?: boolean;
 }
 
 const ResponsiveMenuHeaderComponent = ({
   name,
   link = "",
   color,
-  isDark
+  isDark,
+  active
 }: IProps) => {
+  const linkStyle = { color: "white", fontWeight: "700" };
   return (
     <Box>
       <Link href={link}>
@@ -21,25 +25,13 @@ const ResponsiveMenuHeaderComponent = ({
           <Text
             m={"20px 0px"}
             textAlign={"center"}
-            color={color}
-            fontWeight={"400"}
+            color={active ? "white" : color}
+            fontWeight={active ? "700" : "400"}
             fontSize={"42px"}
-            _hover={{ color: "white", fontWeight: "700" }}
+            _hover={linkStyle}
           >
             {name}
           </Text>
-          {/* <Image
-            ml={"10px"}
-            width={name == "Learn" ? "12px" : "17px"}
-            alt="up-arrow"
-            src={`${
-              isDark
-                ? "./arrow-up-right.svg"
-                : name === "Learn"
-                ? "./downarrow.svg"
-                : "./arrow-right.svg"
-            }`}
-          /> */}
         </Box>
       </Link>
     </Box>

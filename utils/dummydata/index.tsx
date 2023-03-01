@@ -127,7 +127,7 @@ export const gettingStartedData: string[] = [
 export const resourcesData: IHeaderLink[] = [
   { id: 1, name: "Knowledge base", link: productDocumentationLink },
   { id: 2, name: "Support", link: "/aboutus" },
-  { id: 3, name: "FAQ", link: "#getting-started-section" },
+  { id: 3, name: "FAQ", link: "/#getting-started-section" },
   { id: 4, name: "Dictionary", link: "/glossary" }
 ];
 
@@ -161,14 +161,28 @@ export const aboutusData: IAboutUs[] = [
   {
     id: 1,
     title: "About Creators",
-    firstText: "More on Temidayo",
-    secondText: "More on Queennete"
+    links: [
+      { text: "More on Temidayo", link: "https://temidayofolajin.webflow.io/" },
+      {
+        text: "More on Queennete",
+        link: "https://www.linkedin.com/in/queennettekachi/"
+      },
+      {
+        text: "More on Abayomi",
+        link: "https://www.linkedin.com/in/oladiniabayomi/"
+      }
+    ]
   },
   {
     id: 1,
     title: "About OpenDAO",
-    firstText: "Read Documentations",
-    secondText: "Read Vision & Mission"
+    links: [
+      { text: "Read Documentations", link: productDocumentationLink },
+      {
+        text: "Read Vision & Mission",
+        link: productDocumentationLink
+      }
+    ]
   }
 ];
 

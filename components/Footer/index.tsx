@@ -1,7 +1,7 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { IItem, IHeaderLink } from "../../types";
-import { headerData, resourcesData } from "../../utils/dummydata";
+import { headerData, resourcesData, aboutusData } from "../../utils/dummydata";
 import HeaderText from "../HeaderText";
 import ProductInfoLink from "../Links/ProductInfoLink";
 
@@ -94,7 +94,24 @@ const Footer = () => {
         flexDir={{ base: "column-reverse", sm: "row" }}
         gap={"80px"}
       >
-        <Text>Made with ❤️ by Temidayo, Queennette & Abayomi</Text>
+        <Box display={"flex"} gap={"5px"}>
+          <Text>Made with ❤️ by</Text>
+          <Link href={"https://temidayofolajin.webflow.io/"} target={"_blank"}>
+            <Text>Temidayo,</Text>
+          </Link>
+          <Link
+            href={"https://www.linkedin.com/in/queennettekachi/"}
+            target={"_blank"}
+          >
+            <Text>Queennette</Text>
+          </Link>
+          <Link
+            href={"https://www.linkedin.com/in/oladiniabayomi/"}
+            target={"_blank"}
+          >
+            <Text> & Abayomi</Text>
+          </Link>
+        </Box>
         <Box
           display={"flex"}
           gap={"20px"}
