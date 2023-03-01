@@ -127,7 +127,7 @@ export const gettingStartedData: string[] = [
 export const resourcesData: IHeaderLink[] = [
   { id: 1, name: "Knowledge base", link: productDocumentationLink },
   { id: 2, name: "Support", link: "/aboutus" },
-  { id: 3, name: "FAQ", link: "#getting-started-section" },
+  { id: 3, name: "FAQ", link: "/#getting-started-section" },
   { id: 4, name: "Dictionary", link: "/glossary" }
 ];
 
