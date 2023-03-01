@@ -8,6 +8,11 @@ export const useIsDarkMode = () => {
     : false;
 };
 
+export const useGetPathname = () => {
+  const router = useRouter();
+  return router.pathname;
+};
+
 export const useViewPage = () => {
   const router = useRouter();
   function onViewPage(page: string, callBack?: () => void) {
