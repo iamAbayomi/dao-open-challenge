@@ -33,9 +33,10 @@ export interface IInfoContainer {
 }
 
 export interface ICard {
-    image: string
+    id: number
     title: string
     description: string
+    image?: string
 }
 
 export interface IItem{
