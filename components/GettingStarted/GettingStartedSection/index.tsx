@@ -7,7 +7,7 @@ const GettingStartedSection = () => {
   const [isSendNewsLetter, setNewsLetter] = useState<boolean>(false);
 
   function sendNewsLetter() {
-    setNewsLetter(true)
+    setNewsLetter(true);
     setTimeout(() => {
       setNewsLetter(false);
     }, 3000);
@@ -78,7 +78,7 @@ const GettingStartedSection = () => {
 
         <Box margin={"auto"} maxW={"1000px"}>
           {gettingStartedData.map((item, index) => (
-            <GettingStartedComponent key={index} text={item} />
+            <GettingStartedComponent key={index} {...item} />
           ))}
         </Box>
       </Box>
