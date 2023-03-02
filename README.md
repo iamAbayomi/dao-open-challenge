@@ -6,7 +6,7 @@ The web version of the Druids challenge done by [Queennette Onyekachi](https://w
 ## Technologies
 It was fun to use Chakra-UI, Reactjs, Nextjs, Typescript, CSS transitions and Animation. Also, I used Chakra’s UI Custom Checkbox and RadioButton, I know it can be a little tricky to implement if you are a beginner.  
 
-You can find the source code here at https://github.com/iamAbayomi/dao-open-challenge 
+You can find the web version at https://dao-open-challenge.vercel.app/
 
   
 
