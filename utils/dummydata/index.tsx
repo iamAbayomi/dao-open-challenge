@@ -1,6 +1,7 @@
 import {
   IAboutUs,
   IBadge,
+  ICard,
   ICategories,
   IDaoContainer,
   IGlossaryData,
@@ -118,10 +119,55 @@ export const governAssets: string[] = [
   "Have complete transparency and visibility over everything. Secure your Assets!"
 ];
 
-export const gettingStartedData: string[] = [
-  "What is a DAO?",
-  "How do I register a new DAO?",
-  "Do I need crypto to join or invest in a DAO?"
+export const gettingStartedData: ICard[] = [
+  {
+    id: 1,
+    title: "What is a DAO?",
+    description: `According to Investopedia, A decentralized autonomous organization
+  (DAO) is an emerging form of legal structure that has no central
+  governing body and whose members share a common goal to act in the
+  best interest of the entity. Popularized through cryptocurrency
+  enthusiasts and blockchain technology, DAOs are used to make
+  decisions in a bottom-up management approach.`
+  },
+  {
+    id: 2,
+    title: "How do I register a new DAO?",
+    description: `
+      1. Define the purpose and scope of your DAO   
+
+      2. Choose a blockchain platform 
+
+      3. Determine your DAO's governance structure
+
+      4. Create Smart contracts 
+
+      5. Launch the DAO 
+
+      6. Recruit members
+
+      7. Manage your DAO
+      
+  `
+  },
+  {
+    id: 3,
+    title: "Do I need crypto to join or invest in a DAO?",
+    description: `
+      It depends on the specific DAO and its rules. 
+      Some DAOs may require members to hold a certain amount of
+      cryptocurrency or token to participate, while others may 
+      not have such requirements.
+      If a DAO does require cryptocurrency or tokens, you would 
+      need to acquire them in order to join or invest in the DAO.
+        You can typically acquire cryptocurrency or tokens through 
+        a cryptocurrency exchange.
+        It's important to note that investing in a DAO involves risks
+         and is not guaranteed to generate profits. It's recommended 
+         that you do your own research and seek professional advice 
+         before investing in any DAO or cryptocurrency.
+      `
+  }
 ];
 
 export const resourcesData: IHeaderLink[] = [

@@ -1,6 +1,7 @@
 import { Box, Button, Text, Image, CloseButton } from "@chakra-ui/react";
 import { useState } from "react";
 import { IoMdArrowForward } from "react-icons/io";
+import FinalPage from "./FinalPage";
 import Intro from "./Intro";
 import PersonalGoals from "./PersonalGoals";
 
@@ -29,15 +30,21 @@ const QuickSurvey = ({ closeModal }: Props) => {
         boxShadow={"0 4px 8px 0 rgba(0,0,0,0.2)"}
         height={"680px"}
         margin={"40px auto"}
-        p={"25px 29px"}
+        p={"25px 19px"}
         border={"1px solid #A2A0A0"}
         borderRadius={"10px"}
         overflow={"scroll"}
       >
         {step == 1 ? (
           <Intro onClick={() => setStep(2)} closeModal={closeModal} />
+        ) : step == 2 ? (
+          <PersonalGoals
+            changeStep={() => setStep(3)}
+            closeModal={closeModal}
+          />
         ) : (
-          <PersonalGoals closeModal={closeModal} />
+          <FinalPage onClickClose={() => setStep(2)}
+           closeModal={closeModal} />
         )}
       </Box>
     </Box>

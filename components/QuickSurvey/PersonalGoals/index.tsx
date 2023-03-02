@@ -3,16 +3,12 @@ import {
   Button,
   CloseButton,
   Text,
-  useCheckbox,
   useCheckboxGroup
 } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { useState } from "react";
 import { IoMdArrowForward } from "react-icons/io";
-import Example from "../../../pages/test";
 import {
-  interestData,
-  memberData,
   personalGoalData
 } from "../../../utils/dummydata";
 import ButtonCheckbox from "../../ButtonCheckbox";
@@ -24,10 +20,11 @@ const Span = styled.span`
 `;
 
 interface Props {
+  changeStep: () => void;
   closeModal: () => void;
 }
 
-const PersonalGoals = ({ closeModal }: Props) => {
+const PersonalGoals = ({ changeStep, closeModal }: Props) => {
   const { getCheckboxProps } = useCheckboxGroup({
     defaultValue: ["0"]
   });
@@ -35,7 +32,8 @@ const PersonalGoals = ({ closeModal }: Props) => {
 
   function resetState() {
     setStep(1);
-    closeModal();
+    // closeModal();
+    changeStep();
     console.log("close Modal");
   }
 
@@ -104,9 +102,11 @@ const PersonalGoals = ({ closeModal }: Props) => {
             </Text>
             <IoMdArrowForward size={"16px"} fontWeight={"400"} />
           </Button>
-          <Text fontSize={"14px"} className={"pointer"} onClick={resetState}>
-            Ask Me Later
-          </Text>
+          {step !== 3 && (
+            <Text fontSize={"14px"} className={"pointer"} onClick={resetState}>
+              Ask Me Later
+            </Text>
+          )}
         </Box>
       </Box>
     </Box>
