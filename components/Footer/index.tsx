@@ -1,5 +1,5 @@
-import { Box, Image, Text } from "@chakra-ui/react";
-import Link from "next/link";
+import { Box, Image, Link, Text } from "@chakra-ui/react";
+
 import { IItem, IHeaderLink } from "../../types";
 import { headerData, resourcesData, aboutusData } from "../../utils/dummydata";
 import HeaderText from "../HeaderText";
@@ -94,23 +94,31 @@ const Footer = () => {
         flexDir={{ base: "column-reverse", sm: "row" }}
         gap={"80px"}
       >
-        <Box display={"flex"} gap={"5px"}>
-          <Text>Made with ❤️ by</Text>
-          <Link href={"https://temidayofolajin.webflow.io/"} target={"_blank"}>
-            <Text>Temidayo,</Text>
-          </Link>
-          <Link
-            href={"https://www.linkedin.com/in/queennettekachi/"}
-            target={"_blank"}
-          >
-            <Text>Queennette</Text>
-          </Link>
-          <Link
-            href={"https://www.linkedin.com/in/oladiniabayomi/"}
-            target={"_blank"}
-          >
-            <Text> & Abayomi</Text>
-          </Link>
+        <Box>
+          <Text>
+            Made with ❤️ by
+            <Link
+              href={"https://temidayofolajin.webflow.io/"}
+              target={"_blank"}
+              mx={"3px"}
+            >
+              Temidayo,
+            </Link>{" "}
+            <Link
+              href={"https://www.linkedin.com/in/queennettekachi/"}
+              target={"_blank"}
+              mr={"3px"}
+            >
+              Queennette
+            </Link>
+            <Link
+              href={"https://www.linkedin.com/in/oladiniabayomi/"}
+              target={"_blank"}
+              mx={"3px"}
+            >
+              & Abayomi
+            </Link>
+          </Text>
         </Box>
         <Box
           display={"flex"}
