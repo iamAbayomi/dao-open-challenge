@@ -1,5 +1,5 @@
 # Open DAO Challenge
-[!app-image](https://raw.githubusercontent.com/iamAbayomi/dao-open-challenge/main/public/open-dao-main.jpg) 
+![!app-image](https://raw.githubusercontent.com/iamAbayomi/dao-open-challenge/main/public/open-dao-main.jpg) 
 
 The web version of the Druids challenge done by [Queennette Onyekachi](https://www.linkedin.com/in/queennettekachi/) and [Temidayo Folajin](https://temidayofolajin.webflow.io/).  
 
