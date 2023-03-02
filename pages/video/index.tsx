@@ -11,8 +11,9 @@ const Video = () => {
         >
           <Image
             margin={"auto"}
+            w={"100%"}
             p={{ base: "87px 10px", sm: "87px 30px" }}
-            maxW={{ base: "400px", sm: "1200px" }}
+            maxW={{ base: "400px", sm: "700px", md: "1200px" }}
             alt={"image"}
             src={"./video.svg"}
           />
